@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iTarab Radio — App Support &amp; Help</title>
+  <meta
+    name="description"
+    content="Official support, FAQs, and station requests for iTarab Radio — live Arabic radio stations across 19 Arab countries and regions."
+  />
+  <link rel="icon" type="image/png" href="./icon.png" />
+  <style>
+    :root {
+      --bg: #0B0D14;
+      --surface: #131826;
+      --surface-elevated: #1A2133;
+      --border: #1E2538;
+      --gold: #E2B354;
+      --gold-text: #F3CD74;
+      --gold-soft: rgba(226, 179, 84, 0.14);
+      --text: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --live: #E53935;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top center, #161D31 0%, var(--bg) 52%);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--gold-text);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      border: 1px solid rgba(226, 179, 84, 0.35);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .brand h1 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand .subtitle-ar {
+      color: var(--gold-text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
+
+    .nav a {
+      color: var(--text-secondary);
+    }
+
+    .nav a.active,
+    .nav a:hover {
+      color: var(--gold-text);
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 32px 0 24px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--live);
+    }
+
+    .hero h2 {
+      font-size: clamp(1.7rem, 3.6vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.22;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: var(--text-secondary);
+      font-size: 1.03rem;
+      max-width: 650px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .card h3 {
+      font-size: 1.18rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .card p.lead {
+      color: var(--text-secondary);
+      font-size: 0.96rem;
+      margin-bottom: 18px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 0.94rem;
+      font-weight: 700;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn:hover {
+      text-decoration: none;
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--bg);
+    }
+
+    .btn-secondary {
+      background: var(--surface-elevated);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .faq-item {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+
+    .faq-item h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gold-text);
+      margin-bottom: 6px;
+    }
+
+    .faq-item p {
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .highlight-box {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .highlight-box strong {
+      display: block;
+      font-size: 0.96rem;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .highlight-box span {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      display: block;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: var(--text-muted);
+      font-size: 0.86rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <img src="./icon.png" alt="iTarab Radio app icon" width="56" height="56" />
+        <div>
+          <h1>iTarab Radio</h1>
+          <div class="subtitle-ar" lang="ar" dir="rtl">إذاعات عربية مباشرة</div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#support" class="active">Support</a>
+        <a href="#faq">FAQ</a>
+        <a href="./privacy.html">Privacy Policy</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          <span>Live Arabic Radio • 19 Arab Countries &amp; Regions</span>
+        </div>
+        <h2>Need help with iTarab Radio?</h2>
+        <p>
+          Stream over 230 curated Arabic radio stations—including Tarab &amp; Classics,
+          Khaleeji, Arabic Pop, Holy Quran, and Live News—with background audio, Lock Screen
+          controls, and automatic daily station verification.
+        </p>
+      </section>
+
+      <section id="support" class="card">
+        <h3>Support &amp; Station Requests</h3>
+        <p class="lead">
+          If a radio stream stops broadcasting, you would like a station added from your country,
+          or you experience any issue on iPhone or iPad, reach out using the buttons below.
+          Our automated health check also verifies streams daily so updates reach the app without
+          waiting for an App Store release.
+        </p>
+        <div class="actions">
+          <a
+            class="btn btn-primary"
+            href="https://github.com/fekrik/itarab-radio/issues/new?title=Station+Request+or+Fix"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Report a Broken Station / Request a Station
+          </a>
+          <a
+            class="btn btn-secondary"
+            href="https://github.com/fekrik/itarab-radio/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            App Support &amp; General Feedback
+          </a>
+          <a
+            class="btn btn-secondary"
+            href="https://apps.apple.com/us/app/itarab-radio/id625963573"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on the App Store
+          </a>
+        </div>
+
+        <div class="highlights">
+          <div class="highlight-box">
+            <strong>Pull to Refresh Stations</strong>
+            <span>Swipe down on the Stations tab anytime to fetch the newest verified station catalog immediately.</span>
+          </div>
+          <div class="highlight-box">
+            <strong>Automatic Backup Failover</strong>
+            <span>Key broadcasters include backup stream URLs that engage automatically if a primary feed drops.</span>
+          </div>
+          <div class="highlight-box">
+            <strong>Zero Tracking or Accounts</strong>
+            <span>No sign-in required. Favorites and listening history stay private on your device.</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="card">
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h4>Why is a station not playing or stuck connecting?</h4>
+            <p>
+              Radio broadcasters occasionally update their streaming servers. Pull down on the
+              <strong>Stations</strong> screen to refresh the catalog right away—iTarab Radio also
+              syncs updated streams automatically once every 24 hours. If a station remains offline,
+              please report it via the button above so we can update or add a backup stream.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h4>How can I request a new Arabic radio station?</h4>
+            <p>
+              Click <strong>Report a Broken Station / Request a Station</strong> above and include
+              the station name, country (e.g., Yemen, Saudi Arabia, Qatar, Egypt, Lebanon,
+              Morocco), and its official website or stream URL if you know it.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h4>Does iTarab Radio keep playing in the background?</h4>
+            <p>
+              Yes. Audio continues playing when you switch apps or lock your iPhone or iPad, and you
+              can pause, resume, or skip stations directly from the Lock Screen and Control Center.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h4>How do I set a Sleep Timer?</h4>
+            <p>
+              Tap the mini player bar at the bottom of the screen to open the full player, then tap
+              the moon or timer icon to stop playback automatically after 15, 30, 45, or 60 minutes.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h4>Where are my Favorites saved?</h4>
+            <p>
+              Your favorite stations and recently played shortcuts are stored locally on your device.
+              No account is required, and no personal data is sent to our servers.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; 2026 iTarab Radio</span>
+      <div class="footer-links">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="https://apps.apple.com/us/app/itarab-radio/id625963573" target="_blank" rel="noopener noreferrer">App Store</a>
+        <a href="https://github.com/fekrik/itarab-radio" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
