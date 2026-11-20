@@ -1,0 +1,251 @@
+[
+  {
+    "id": "curated-sout-al-khaleej",
+    "name": "Sout Al Khaleej صوت الخليج",
+    "countryCode": "QA",
+    "category": "tarab",
+    "streamUrl": "https://live.kwikmotion.com/qmcslkrradiolive/slkrradio/playlist.m3u8",
+    "logoUrl": "https://www.soutalkhaleej.fm/wp-content/uploads/2024/11/logo.png",
+    "tags": ["arabic", "tarab", "khaleeji", "qatar", "gulf"],
+    "featured": true
+  },
+  {
+    "id": "curated-ye-sanaa-radio",
+    "name": "Sana’a Radio راديو صنعاء",
+    "countryCode": "YE",
+    "category": "variety",
+    "streamUrl": "https://dc5.serverse.com/proxy/pbmhbvxs/stream",
+    "logoUrl": null,
+    "tags": ["arabic", "yemen", "sanaa", "variety"],
+    "featured": true
+  },
+  {
+    "id": "curated-ye-sam-fm",
+    "name": "Sam FM سام إف إم",
+    "countryCode": "YE",
+    "category": "music",
+    "streamUrl": "https://edge.mixlr.com/channel/kijwr",
+    "logoUrl": null,
+    "tags": ["arabic", "yemen", "sanaa", "music"],
+    "featured": true
+  },
+  {
+    "id": "curated-ye-huna-aden",
+    "name": "Huna Aden FM هنا عدن",
+    "countryCode": "YE",
+    "category": "variety",
+    "streamUrl": "https://c30.radioboss.fm:18267/stream",
+    "logoUrl": null,
+    "tags": ["arabic", "yemen", "aden", "variety"],
+    "featured": true
+  },
+  {
+    "id": "curated-ye-lana-fm",
+    "name": "Radio Lana FM راديو لانا",
+    "countryCode": "YE",
+    "category": "music",
+    "streamUrl": "https://stream.zeno.fm/542gubz258quv",
+    "logoUrl": null,
+    "tags": ["arabic", "yemen", "music"],
+    "featured": true
+  },
+  {
+    "id": "curated-ye-afaq-fm",
+    "name": "Afaq FM راديو آفاق",
+    "countryCode": "YE",
+    "category": "variety",
+    "streamUrl": "https://edge.mixlr.com/channel/rumps",
+    "logoUrl": null,
+    "tags": ["arabic", "yemen", "variety"],
+    "featured": true
+  },
+  {
+    "id": "curated-ye-noor-al-eman",
+    "name": "Noor Al-Eman نور الإيمان",
+    "countryCode": "YE",
+    "category": "quran",
+    "streamUrl": "https://edge.mixlr.com/channel/boaht",
+    "logoUrl": null,
+    "tags": ["arabic", "yemen", "quran"],
+    "featured": false
+  },
+  {
+    "id": "curated-ye-quran-sanaa",
+    "name": "إذاعة القرآن الكريم (صنعاء)",
+    "countryCode": "YE",
+    "category": "quran",
+    "streamUrl": "https://halo.streamerr.co/listen/quran_kareem/radio.mp3",
+    "logoUrl": null,
+    "tags": ["arabic", "yemen", "quran"],
+    "featured": false
+  },
+  {
+    "id": "curated-ye-sawt-almukawama",
+    "name": "صوت المقاومة",
+    "countryCode": "YE",
+    "category": "news",
+    "streamUrl": "https://stream.zeno.fm/b67qheuk54zuv",
+    "logoUrl": null,
+    "tags": ["arabic", "yemen", "news"],
+    "featured": false
+  },
+  {
+    "id": "curated-sa-mbc-fm",
+    "name": "MBC FM",
+    "countryCode": "SA",
+    "category": "music",
+    "streamUrl": "https://radio-mbcfm.mbc.net/radio-mbcfm_1.m3u8",
+    "logoUrl": "https://assets-new.mbcmood.com/mbc-mood/channel/6adb0cd12bdd7.png",
+    "tags": ["arabic", "music", "khaleeji", "saudi", "mbc"],
+    "featured": true
+  },
+  {
+    "id": "curated-sa-mbc-mood",
+    "name": "MBC Mood",
+    "countryCode": "SA",
+    "category": "music",
+    "streamUrl": "https://radio-mbc-mood.mbc.net/radio-mbc-mood.m3u8",
+    "logoUrl": "https://assets.mbcmood.com/channels/1780385818Logo%20request%20thumbnail.jpg",
+    "tags": ["arabic", "music", "mbc", "saudi"],
+    "featured": true
+  },
+  {
+    "id": "curated-sa-panorama-fm",
+    "name": "Panorama FM بانوراما",
+    "countryCode": "SA",
+    "category": "music",
+    "streamUrl": "https://radio-panoramafm.mbc.net/radio-panoramafm_1.m3u8",
+    "logoUrl": null,
+    "tags": ["arabic", "music", "hits", "saudi"],
+    "featured": true
+  },
+  {
+    "id": "curated-ae-al-khaleejiya",
+    "name": "Al Khaleejiya 100.9 FM الخليجية",
+    "countryCode": "AE",
+    "category": "music",
+    "streamUrl": "https://stream.radiojar.com/5wpf9e4erxquv",
+    "logoUrl": null,
+    "tags": ["arabic", "khaleeji", "music", "uae"],
+    "featured": true
+  },
+  {
+    "id": "curated-qa-qatar-radio",
+    "name": "Qatar Radio إذاعة قطر",
+    "countryCode": "QA",
+    "category": "variety",
+    "streamUrl": "https://live.kwikmotion.com/qmcqatarradiolive/qatarradio/playlist.m3u8",
+    "logoUrl": null,
+    "tags": ["arabic", "qatar", "variety"],
+    "featured": true
+  },
+  {
+    "id": "curated-ae-sky-news-arabia",
+    "name": "Sky News Arabia Radio",
+    "countryCode": "AE",
+    "category": "news",
+    "streamUrl": "https://stream.skynewsarabia.com/hls/sna.m3u8",
+    "logoUrl": "https://skynewsarabia.com/apple-touch-icon-72x72.png",
+    "tags": ["arabic", "news", "talk", "uae"],
+    "featured": true
+  },
+  {
+    "id": "curated-intl-bbc-arabic",
+    "name": "BBC Arabic Radio بي بي سي عربي",
+    "countryCode": "INTL",
+    "category": "news",
+    "streamUrl": "https://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio",
+    "fallbackUrls": [
+      "https://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/nonuk/sbr_low/ak/bbc_arabic_radio.m3u8"
+    ],
+    "logoUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-128x128.png",
+    "tags": ["arabic", "news", "bbc", "talk"],
+    "featured": true
+  },
+  {
+    "id": "curated-intl-monte-carlo",
+    "name": "Monte Carlo Doualiya مونت كارلو الدولية",
+    "countryCode": "INTL",
+    "category": "news",
+    "streamUrl": "https://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3",
+    "logoUrl": null,
+    "tags": ["arabic", "news", "talk", "monte carlo"],
+    "featured": true
+  },
+  {
+    "id": "curated-qa-aljazeera-arabic",
+    "name": "Al Jazeera Arabic الجزيرة",
+    "countryCode": "QA",
+    "category": "news",
+    "streamUrl": "https://live-hls-audio-web-aja.getaj.net/VOICE-AJA/01.m3u8",
+    "fallbackUrls": [
+      "https://live-hls-web-aja-gcp.thehlive.com/VOICE-AJA/index.m3u8"
+    ],
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/ar/thumb/7/71/Aljazeera.svg/1200px-Aljazeera.svg.png",
+    "tags": ["arabic", "news", "aljazeera", "qatar"],
+    "featured": true
+  },
+  {
+    "id": "curated-eg-nogoum-fm",
+    "name": "Nogoum FM نجوم إف إم",
+    "countryCode": "EG",
+    "category": "music",
+    "streamUrl": "https://stream.zeno.fm/qb1zvsykm98uv",
+    "logoUrl": "https://www.nogoumfm.net/wp-content/uploads/2019/12/logo-nogoum-1.png",
+    "tags": ["arabic", "music", "egypt", "pop"],
+    "featured": true
+  },
+  {
+    "id": "curated-eg-om-kalthom",
+    "name": "OM Kalthom أم كلثوم",
+    "countryCode": "EG",
+    "category": "tarab",
+    "streamUrl": "https://stream.zeno.fm/zsgrfxg71s8uv",
+    "logoUrl": "https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgICwmLXj6gkMCxIOU3RhdGlvblByb2ZpbGUYgICwnNazygoMogEEemVubw/image/?u=1660862760000",
+    "tags": ["arabic", "tarab", "classics", "egypt"],
+    "featured": true
+  },
+  {
+    "id": "curated-lb-fairuz",
+    "name": "Fairuz فيروز",
+    "countryCode": "LB",
+    "category": "tarab",
+    "streamUrl": "https://stream.zeno.fm/xkhnk4vee18uv",
+    "fallbackUrls": [
+      "https://stream.zeno.fm/9vrahqqfuuhvv"
+    ],
+    "logoUrl": "https://proxy.zeno.fm/content/stations/agxzfnplbm8tc3RhdHNyMgsSCkF1dGhDbGllbnQYgICQr4HTxQsMCxIOU3RhdGlvblByb2ZpbGUYgICw9euSvggMogEEemVubw/image/?u=166170323300",
+    "tags": ["arabic", "tarab", "fairuz", "lebanon"],
+    "featured": true
+  },
+  {
+    "id": "curated-lb-sawt-el-ghad",
+    "name": "Sawt El Ghad صوت الغد",
+    "countryCode": "LB",
+    "category": "music",
+    "streamUrl": "https://l3.itworkscdn.net/itwaudio/9030/stream",
+    "logoUrl": null,
+    "tags": ["arabic", "music", "lebanon"],
+    "featured": true
+  },
+  {
+    "id": "curated-ps-sawt-el-ghad-tarab",
+    "name": "Sawt El Ghad - Tarab",
+    "countryCode": "PS",
+    "category": "tarab",
+    "streamUrl": "https://sawtelghad.org:7007/;",
+    "logoUrl": null,
+    "tags": ["arabic", "tarab", "palestine"],
+    "featured": true
+  },
+  {
+    "id": "curated-tn-mosaique-tarab",
+    "name": "Mosaique FM Tarab",
+    "countryCode": "TN",
+    "category": "tarab",
+    "streamUrl": "https://radio.mosaiquefm.net/mosatarab",
+    "logoUrl": null,
+    "tags": ["arabic", "tarab", "tunisia"],
+    "featured": true
+  }
+]

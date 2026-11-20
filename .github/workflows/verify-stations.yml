@@ -1,0 +1,53 @@
+name: Verify Arabic Radio Stations
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Run verify-only or full Radio-Browser re-curation'
+        required: true
+        default: 'verify'
+        type: choice
+        options:
+          - verify
+          - curate
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify or curate Arabic radio catalog
+        run: |
+          if [ "${{ inputs.mode }}" = "curate" ]; then
+            node scripts/curate-stations.mjs
+          else
+            node scripts/curate-stations.mjs --verify-only
+          fi
+
+      - name: Validate catalog schema
+        run: node scripts/test-catalog.mjs
+
+      - name: Commit updated catalog if changed
+        run: |
+          if [ -n "$(git status --porcelain catalog/)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add catalog/stations.json catalog/report.md
+            git commit -m "chore(catalog): update verified Arabic radio stations"
+            git push
+          else
+            echo "No catalog changes detected."
+          fi
