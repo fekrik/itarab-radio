@@ -1,12 +1,12 @@
 # iTarab Radio — Station Catalog Verification Report
 
-- **Generated:** 2026-11-20T12:18:57.732Z
-- **Mode:** full-curation
-- **Curated flagship stations live:** 24
-- **Total candidates evaluated:** 1429
-- **Passed pre-filter (HTTPS + compatible codec + Arabic/MENA):** 546
-- **Live probe passed:** 463
-- **Live probe failed:** 82
+- **Generated:** 2026-11-21T14:30:55.462Z
+- **Mode:** verify-only
+- **Curated flagship stations live:** 23
+- **Total candidates evaluated:** 234
+- **Passed pre-filter (HTTPS + compatible codec + Arabic/MENA):** 234
+- **Live probe passed:** 233
+- **Live probe failed:** 1
 - **Final catalog count:** 233
 
 ## Breakdown by Category
@@ -44,51 +44,44 @@
 ## Probe Failure Reasons
 | Reason | Count |
 | :--- | ---: |
-| `network-error` | 44 |
-| `timeout` | 20 |
-| `http-404` | 6 |
-| `redirected-to-http` | 5 |
-| `http-502` | 2 |
-| `http-401` | 2 |
-| `http-400` | 2 |
+| `curated:network-error` | 1 |
 | `curated:broken-hls-variant` | 1 |
-| `broken-hls-variant` | 1 |
 
 ## Curated & Top Verified Stations
 | Name | Country | Category | Codec | Latency |
 | :--- | :--- | :--- | :--- | ---: |
-| Sout Al Khaleej صوت الخليج | 🇶🇦 Qatar | `tarab` | HLS | 1114ms |
-| Sana’a Radio راديو صنعاء | 🇾🇪 Yemen | `variety` | MP3 | 544ms |
-| Sam FM سام إف إم | 🇾🇪 Yemen | `music` | MP3 | 622ms |
-| Huna Aden FM هنا عدن | 🇾🇪 Yemen | `variety` | MP3 | 446ms |
-| Radio Lana FM راديو لانا | 🇾🇪 Yemen | `music` | MP3 | 1425ms |
-| Afaq FM راديو آفاق | 🇾🇪 Yemen | `variety` | MP3 | 1312ms |
-| Noor Al-Eman نور الإيمان | 🇾🇪 Yemen | `quran` | MP3 | 608ms |
-| إذاعة القرآن الكريم (صنعاء) | 🇾🇪 Yemen | `quran` | MP3 | 1023ms |
-| صوت المقاومة | 🇾🇪 Yemen | `news` | MP3 | 1439ms |
-| MBC FM | 🇸🇦 Saudi Arabia | `music` | HLS | 482ms |
-| MBC Mood | 🇸🇦 Saudi Arabia | `music` | HLS | 1136ms |
-| Panorama FM بانوراما | 🇸🇦 Saudi Arabia | `music` | HLS | 524ms |
-| Al Khaleejiya 100.9 FM الخليجية | 🇦🇪 United Arab Emirates | `music` | MP3 | 3566ms |
-| Qatar Radio إذاعة قطر | 🇶🇦 Qatar | `variety` | HLS | 1034ms |
-| Sky News Arabia Radio | 🇦🇪 United Arab Emirates | `news` | HLS | 645ms |
-| BBC Arabic Radio بي بي سي عربي | 🌍 Pan-Arab / International | `news` | MP3 | 901ms |
-| Monte Carlo Doualiya مونت كارلو الدولية | 🌍 Pan-Arab / International | `news` | MP3 | 2243ms |
-| Al Jazeera Arabic الجزيرة | 🇶🇦 Qatar | `news` | HLS | 436ms |
-| Nogoum FM نجوم إف إم | 🇪🇬 Egypt | `music` | MP3 | 1705ms |
-| OM Kalthom أم كلثوم | 🇪🇬 Egypt | `tarab` | MP3 | 1220ms |
-| Fairuz فيروز | 🇱🇧 Lebanon | `tarab` | MP3 | 1013ms |
-| Sawt El Ghad صوت الغد | 🇱🇧 Lebanon | `music` | MP3 | 904ms |
-| Sawt El Ghad - Tarab | 🇵🇸 Palestine | `tarab` | MP3 | 430ms |
-| Mosaique FM Tarab | 🇹🇳 Tunisia | `tarab` | MP3 | 1201ms |
-| راديو الشيخ محمد المقرمي إذاعة (هندسة القلوب) | 🇾🇪 Yemen | `variety` | MP3 | 817ms |
-| إذاعة ابن القيم السلفية | 🇾🇪 Yemen | `quran` | MP3 | 428ms |
-| Tarab Radio | 🇲🇦 Morocco | `tarab` | MP3 | 1076ms |
-| Medina FM Tarab (128 kbps) | 🇲🇦 Morocco | `tarab` | MP3 | 1940ms |
-| Fyrozzzz | 🇯🇴 Jordan | `tarab` | MP3 | 659ms |
-| Medi1 Tarab | 🇲🇦 Morocco | `tarab` | MP3 | 802ms |
-| Wa3 Radio وع | 🇱🇧 Lebanon | `tarab` | MP3 | 783ms |
-| Amr Diab Radio | 🇪🇬 Egypt | `music` | MP3 | 1239ms |
-| Only rai | 🇲🇦 Morocco | `music` | MP3 | 1442ms |
-| Diab FM | 🇪🇬 Egypt | `music` | MP3 | 796ms |
-| Hit Radio Maroc | 🇲🇦 Morocco | `music` | MP3 | 1008ms |
+| Sout Al Khaleej صوت الخليج | 🇶🇦 Qatar | `tarab` | HLS | 1035ms |
+| Sana’a Radio راديو صنعاء | 🇾🇪 Yemen | `variety` | MP3 | 462ms |
+| Sam FM سام إف إم | 🇾🇪 Yemen | `music` | MP3 | 640ms |
+| Huna Aden FM هنا عدن | 🇾🇪 Yemen | `variety` | MP3 | 479ms |
+| Radio Lana FM راديو لانا | 🇾🇪 Yemen | `music` | MP3 | 817ms |
+| Afaq FM راديو آفاق | 🇾🇪 Yemen | `variety` | MP3 | 663ms |
+| Noor Al-Eman نور الإيمان | 🇾🇪 Yemen | `quran` | MP3 | 663ms |
+| إذاعة القرآن الكريم (صنعاء) | 🇾🇪 Yemen | `quran` | MP3 | 692ms |
+| صوت المقاومة | 🇾🇪 Yemen | `news` | MP3 | 852ms |
+| MBC FM | 🇸🇦 Saudi Arabia | `music` | HLS | 621ms |
+| MBC Mood | 🇸🇦 Saudi Arabia | `music` | HLS | 1221ms |
+| Panorama FM بانوراما | 🇸🇦 Saudi Arabia | `music` | HLS | 757ms |
+| Qatar Radio إذاعة قطر | 🇶🇦 Qatar | `variety` | HLS | 1124ms |
+| Sky News Arabia Radio | 🇦🇪 United Arab Emirates | `news` | HLS | 842ms |
+| BBC Arabic Radio بي بي سي عربي | 🌍 Pan-Arab / International | `news` | MP3 | 1917ms |
+| Monte Carlo Doualiya مونت كارلو الدولية | 🌍 Pan-Arab / International | `news` | MP3 | 2292ms |
+| Al Jazeera Arabic الجزيرة | 🇶🇦 Qatar | `news` | HLS | 703ms |
+| Nogoum FM نجوم إف إم | 🇪🇬 Egypt | `music` | MP3 | 1115ms |
+| OM Kalthom أم كلثوم | 🇪🇬 Egypt | `tarab` | MP3 | 1153ms |
+| Fairuz فيروز | 🇱🇧 Lebanon | `tarab` | MP3 | 573ms |
+| Sawt El Ghad صوت الغد | 🇱🇧 Lebanon | `music` | MP3 | 869ms |
+| Sawt El Ghad - Tarab | 🇵🇸 Palestine | `tarab` | MP3 | 406ms |
+| Mosaique FM Tarab | 🇹🇳 Tunisia | `tarab` | MP3 | 1258ms |
+| Al Khaleejiya 100.9 FM الخليجية | 🇦🇪 United Arab Emirates | `music` | MP3 | 2047ms |
+| راديو الشيخ محمد المقرمي إذاعة (هندسة القلوب) | 🇾🇪 Yemen | `variety` | MP3 | 616ms |
+| إذاعة ابن القيم السلفية | 🇾🇪 Yemen | `quran` | MP3 | 477ms |
+| Tarab Radio | 🇲🇦 Morocco | `tarab` | MP3 | 958ms |
+| Medina FM Tarab (128 kbps) | 🇲🇦 Morocco | `tarab` | MP3 | 1572ms |
+| Fyrozzzz | 🇯🇴 Jordan | `tarab` | MP3 | 70ms |
+| Medi1 Tarab | 🇲🇦 Morocco | `tarab` | MP3 | 755ms |
+| Wa3 Radio وع | 🇱🇧 Lebanon | `tarab` | MP3 | 1062ms |
+| Amr Diab Radio | 🇪🇬 Egypt | `music` | MP3 | 899ms |
+| Only rai | 🇲🇦 Morocco | `music` | MP3 | 1856ms |
+| Diab FM | 🇪🇬 Egypt | `music` | MP3 | 960ms |
+| Hit Radio Maroc | 🇲🇦 Morocco | `music` | MP3 | 1514ms |
