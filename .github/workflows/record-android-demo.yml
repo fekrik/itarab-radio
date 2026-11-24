@@ -64,6 +64,134 @@ jobs:
             sudo apt-get install -y ffmpeg
           fi
 
+      - name: Prepare emulator recording scripts
+        run: |
+          cat > /tmp/ui_helper.py << 'PY'
+          import re, subprocess, sys, xml.etree.ElementTree as ET
+
+          def dump_nodes():
+              subprocess.run(["adb", "shell", "uiautomator", "dump", "/sdcard/ui.xml"], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+              xml_str = subprocess.check_output(["adb", "shell", "cat", "/sdcard/ui.xml"], text=True, errors="ignore")
+              root = ET.fromstring(xml_str)
+              return list(root.iter("node"))
+
+          def parse_center(bounds):
+              m = re.match(r"\[(\d+),(\d+)\]\[(\d+),(\d+)\]", bounds or "")
+              if not m:
+                  return None
+              x1, y1, x2, y2 = map(int, m.groups())
+              return ((x1 + x2) // 2, (y1 + y2) // 2, y1, y2)
+
+          action = sys.argv[1]
+          nodes = dump_nodes()
+          if action == "find_station":
+              keywords = ["Sana", "Sam FM", "Huna Aden", "Sout Al Khaleej", "Fairuz"]
+              for min_y in (1000, 650):
+                  for kw in keywords:
+                      for n in nodes:
+                          txt = n.attrib.get("text", "")
+                          if kw.lower() in txt.lower():
+                              pos = parse_center(n.attrib.get("bounds"))
+                              if pos and pos[2] >= min_y:
+                                  print(f"{pos[0]} {pos[1]} {txt}")
+                                  sys.exit(0)
+              print("540 1350 fallback")
+          elif action == "check_live":
+              for n in nodes:
+                  txt = n.attrib.get("text", "")
+                  if "LIVE" in txt and n.attrib.get("bounds"):
+                      pos = parse_center(n.attrib.get("bounds"))
+                      if pos and pos[2] >= 1800:
+                          print(f"{pos[0]} {pos[1]} {txt}")
+                          sys.exit(0)
+              sys.exit(1)
+          PY
+
+          cat > /tmp/record_demo.sh << 'SH'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          mkdir -p demo-output
+
+          adb wait-for-device
+          adb shell settings put global stay_on_while_plugged_in 3
+          adb shell input keyevent 82 || true
+
+          adb install -r -g android/app/build/outputs/apk/release/app-release.apk
+
+          adb shell screenrecord --bit-rate 3000000 --size 720x1600 --time-limit 45 /sdcard/raw-demo.mp4 &
+          sleep 1
+
+          adb shell monkey -p com.almojor.itarab -c android.intent.category.LAUNCHER 1
+          sleep 5
+          adb exec-out screencap -p > demo-output/01-stations.png
+
+          STATION_HIT="$(python3 /tmp/ui_helper.py find_station)"
+          echo "Tapping station: $STATION_HIT"
+          SX="$(echo "$STATION_HIT" | awk '{print $1}')"
+          SY="$(echo "$STATION_HIT" | awk '{print $2}')"
+          adb shell input tap "$SX" "$SY"
+
+          LIVE_HIT=""
+          for i in $(seq 1 8); do
+            sleep 1
+            if LIVE_HIT="$(python3 /tmp/ui_helper.py check_live)"; then
+              echo "Live MiniPlayer detected at attempt $i: $LIVE_HIT"
+              break
+            fi
+          done
+          if [ -z "$LIVE_HIT" ]; then
+            echo "First station did not report LIVE in 8s; trying Sam FM fallback..."
+            adb shell input tap 540 1620
+            for i in $(seq 1 8); do
+              sleep 1
+              if LIVE_HIT="$(python3 /tmp/ui_helper.py check_live)"; then
+                echo "Live MiniPlayer detected on fallback at attempt $i: $LIVE_HIT"
+                break
+              fi
+            done
+          fi
+          sleep 1
+          adb exec-out screencap -p > demo-output/02-playing.png
+
+          if [ -n "$LIVE_HIT" ]; then
+            MX="$(echo "$LIVE_HIT" | awk '{print $1}')"
+            MY="$(echo "$LIVE_HIT" | awk '{print $2}')"
+            adb shell input tap "$MX" "$MY"
+          else
+            adb shell input tap 450 2060
+          fi
+          sleep 3
+          adb exec-out screencap -p > demo-output/03-fullplayer.png
+
+          adb shell input keyevent KEYCODE_HOME
+          sleep 2
+          adb exec-out screencap -p > demo-output/04-home.png
+
+          adb shell cmd statusbar expand-notifications
+          sleep 4
+          adb exec-out screencap -p > demo-output/05-notification.png
+
+          echo "=== AudioControlsService status ==="
+          adb shell dumpsys activity services expo.modules.audio.service.AudioControlsService | head -n 45 || true
+
+          adb shell pkill -INT screenrecord || true
+          for i in $(seq 1 15); do
+            if ! adb shell pgrep screenrecord >/dev/null 2>&1; then
+              break
+            fi
+            sleep 1
+          done
+          sleep 1
+
+          adb pull /sdcard/raw-demo.mp4 demo-output/raw-demo.mp4
+          ffmpeg -y -i demo-output/raw-demo.mp4 \
+            -c:v libx264 -preset fast -crf 24 -pix_fmt yuv420p -movflags +faststart \
+            demo-output/foreground-service-demo.mp4
+          rm -f demo-output/raw-demo.mp4
+          ls -lh demo-output/
+          SH
+          chmod +x /tmp/record_demo.sh
+
       - name: Run emulator and record Foreground Service demo
         uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -73,132 +201,7 @@ jobs:
           profile: pixel_6
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -no-boot-anim
           disable-animations: false
-          script: |
-            set -euo pipefail
-            mkdir -p demo-output
-
-            adb wait-for-device
-            adb shell settings put global stay_on_while_plugged_in 3
-            adb shell input keyevent 82 || true
-
-            adb install -r -g android/app/build/outputs/apk/release/app-release.apk
-
-            cat > /tmp/ui_helper.py << 'PY'
-            import re, subprocess, sys, xml.etree.ElementTree as ET
-
-            def dump_nodes():
-                subprocess.run(["adb", "shell", "uiautomator", "dump", "/sdcard/ui.xml"], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                xml_str = subprocess.check_output(["adb", "shell", "cat", "/sdcard/ui.xml"], text=True, errors="ignore")
-                root = ET.fromstring(xml_str)
-                return list(root.iter("node"))
-
-            def parse_center(bounds):
-                m = re.match(r"\[(\d+),(\d+)\]\[(\d+),(\d+)\]", bounds or "")
-                if not m:
-                    return None
-                x1, y1, x2, y2 = map(int, m.groups())
-                return ((x1 + x2) // 2, (y1 + y2) // 2, y1, y2)
-
-            action = sys.argv[1]
-            nodes = dump_nodes()
-            if action == "find_station":
-                keywords = ["Sana", "Sam FM", "Huna Aden", "Sout Al Khaleej", "Fairuz"]
-                for min_y in (1000, 650):
-                    for kw in keywords:
-                        for n in nodes:
-                            txt = n.attrib.get("text", "")
-                            if kw.lower() in txt.lower():
-                                pos = parse_center(n.attrib.get("bounds"))
-                                if pos and pos[2] >= min_y:
-                                    print(f"{pos[0]} {pos[1]} {txt}")
-                                    sys.exit(0)
-                print("540 1350 fallback")
-            elif action == "check_live":
-                for n in nodes:
-                    txt = n.attrib.get("text", "")
-                    if "LIVE" in txt and n.attrib.get("bounds"):
-                        pos = parse_center(n.attrib.get("bounds"))
-                        if pos and pos[2] >= 1800:
-                            print(f"{pos[0]} {pos[1]} {txt}")
-                            sys.exit(0)
-                sys.exit(1)
-            PY
-
-            adb shell screenrecord --bit-rate 3000000 --size 720x1600 --time-limit 40 /sdcard/raw-demo.mp4 &
-            sleep 1
-
-            adb shell monkey -p com.almojor.itarab -c android.intent.category.LAUNCHER 1
-            sleep 5
-            adb exec-out screencap -p > demo-output/01-stations.png
-
-            STATION_HIT="$(python3 /tmp/ui_helper.py find_station)"
-            echo "Tapping station: $STATION_HIT"
-            SX="$(echo "$STATION_HIT" | awk '{print $1}')"
-            SY="$(echo "$STATION_HIT" | awk '{print $2}')"
-            adb shell input tap "$SX" "$SY"
-
-            LIVE_HIT=""
-            for i in $(seq 1 8); do
-              sleep 1
-              if LIVE_HIT="$(python3 /tmp/ui_helper.py check_live)"; then
-                echo "Live MiniPlayer detected at attempt $i: $LIVE_HIT"
-                break
-              fi
-            done
-            if [ -z "$LIVE_HIT" ]; then
-              echo "First station did not report LIVE in 8s; trying Sam FM fallback..."
-              adb shell input tap 540 1620
-              for i in $(seq 1 8); do
-                sleep 1
-                if LIVE_HIT="$(python3 /tmp/ui_helper.py check_live)"; then
-                  echo "Live MiniPlayer detected on fallback at attempt $i: $LIVE_HIT"
-                  break
-                fi
-              done
-            fi
-            sleep 1
-            adb exec-out screencap -p > demo-output/02-playing.png
-
-            # Open Full Player Modal from MiniPlayer
-            if [ -n "$LIVE_HIT" ]; then
-              MX="$(echo "$LIVE_HIT" | awk '{print $1}')"
-              MY="$(echo "$LIVE_HIT" | awk '{print $2}')"
-              adb shell input tap "$MX" "$MY"
-            else
-              adb shell input tap 450 2060
-            fi
-            sleep 3
-            adb exec-out screencap -p > demo-output/03-fullplayer.png
-
-            # Return to Home screen while audio plays in foreground service
-            adb shell input keyevent KEYCODE_HOME
-            sleep 2
-            adb exec-out screencap -p > demo-output/04-home.png
-
-            # Pull down notification shade showing Media playback foreground service notification
-            adb shell cmd statusbar expand-notifications
-            sleep 4
-            adb exec-out screencap -p > demo-output/05-notification.png
-
-            echo "=== AudioControlsService status ==="
-            adb shell dumpsys activity services expo.modules.audio.service.AudioControlsService | head -n 45 || true
-
-            # Cleanly finalize screenrecord MP4
-            adb shell pkill -INT screenrecord || true
-            for i in $(seq 1 15); do
-              if ! adb shell pgrep screenrecord >/dev/null 2>&1; then
-                break
-              fi
-              sleep 1
-            done
-            sleep 1
-
-            adb pull /sdcard/raw-demo.mp4 demo-output/raw-demo.mp4
-            ffmpeg -y -i demo-output/raw-demo.mp4 \
-              -c:v libx264 -preset fast -crf 24 -pix_fmt yuv420p -movflags +faststart \
-              demo-output/foreground-service-demo.mp4
-            rm -f demo-output/raw-demo.mp4
-            ls -lh demo-output/
+          script: bash /tmp/record_demo.sh
 
       - name: Upload recorded demo artifacts
         uses: actions/upload-artifact@v4
