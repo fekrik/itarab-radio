@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-23T17:54:24.257Z",
-  "stationCount": 231,
+  "updatedAt": "2026-11-24T17:27:19.435Z",
+  "stationCount": 230,
   "categories": [
     {
       "id": "tarab",
@@ -50,7 +50,7 @@
         "qatar",
         "gulf"
       ],
-      "latencyMs": 742,
+      "latencyMs": 1192,
       "featured": true
     },
     {
@@ -72,7 +72,7 @@
         "yemen",
         "sanaa"
       ],
-      "latencyMs": 435,
+      "latencyMs": 671,
       "featured": true
     },
     {
@@ -94,7 +94,7 @@
         "yemen",
         "sanaa"
       ],
-      "latencyMs": 623,
+      "latencyMs": 759,
       "featured": true
     },
     {
@@ -116,7 +116,7 @@
         "yemen",
         "aden"
       ],
-      "latencyMs": 531,
+      "latencyMs": 762,
       "featured": true
     },
     {
@@ -137,7 +137,7 @@
         "music",
         "yemen"
       ],
-      "latencyMs": 782,
+      "latencyMs": 1204,
       "featured": true
     },
     {
@@ -158,7 +158,7 @@
         "variety",
         "yemen"
       ],
-      "latencyMs": 744,
+      "latencyMs": 938,
       "featured": true
     },
     {
@@ -179,7 +179,7 @@
         "quran",
         "yemen"
       ],
-      "latencyMs": 743,
+      "latencyMs": 954,
       "featured": false
     },
     {
@@ -200,7 +200,7 @@
         "quran",
         "yemen"
       ],
-      "latencyMs": 757,
+      "latencyMs": 1016,
       "featured": false
     },
     {
@@ -221,7 +221,7 @@
         "news",
         "yemen"
       ],
-      "latencyMs": 822,
+      "latencyMs": 1198,
       "featured": false
     },
     {
@@ -244,29 +244,7 @@
         "saudi",
         "mbc"
       ],
-      "latencyMs": 680,
-      "featured": true
-    },
-    {
-      "id": "curated-sa-mbc-mood",
-      "name": "MBC Mood",
-      "countryCode": "SA",
-      "country": "Saudi Arabia",
-      "countryAr": "السعودية",
-      "flag": "🇸🇦",
-      "category": "music",
-      "streamUrl": "https://radio-mbc-mood.mbc.net/radio-mbc-mood.m3u8",
-      "codec": "HLS",
-      "bitrate": 128,
-      "isHls": true,
-      "logoUrl": "https://assets.mbcmood.com/channels/1780385818Logo%20request%20thumbnail.jpg",
-      "tags": [
-        "arabic",
-        "music",
-        "mbc",
-        "saudi"
-      ],
-      "latencyMs": 1173,
+      "latencyMs": 873,
       "featured": true
     },
     {
@@ -288,7 +266,7 @@
         "hits",
         "saudi"
       ],
-      "latencyMs": 736,
+      "latencyMs": 1047,
       "featured": true
     },
     {
@@ -310,7 +288,7 @@
         "khaleeji",
         "uae"
       ],
-      "latencyMs": 1964,
+      "latencyMs": 2502,
       "featured": true
     },
     {
@@ -331,7 +309,7 @@
         "variety",
         "qatar"
       ],
-      "latencyMs": 1204,
+      "latencyMs": 1734,
       "featured": true
     },
     {
@@ -353,7 +331,7 @@
         "talk",
         "uae"
       ],
-      "latencyMs": 730,
+      "latencyMs": 1024,
       "featured": true
     },
     {
@@ -375,7 +353,7 @@
         "bbc",
         "talk"
       ],
-      "latencyMs": 1618,
+      "latencyMs": 1852,
       "featured": true
     },
     {
@@ -397,7 +375,7 @@
         "talk",
         "monte carlo"
       ],
-      "latencyMs": 2132,
+      "latencyMs": 2726,
       "featured": true
     },
     {
@@ -419,7 +397,7 @@
         "aljazeera",
         "qatar"
       ],
-      "latencyMs": 666,
+      "latencyMs": 1076,
       "featured": true,
       "fallbackUrls": [
         "https://live-hls-web-aja-gcp.thehlive.com/VOICE-AJA/index.m3u8"
@@ -444,7 +422,7 @@
         "egypt",
         "pop"
       ],
-      "latencyMs": 988,
+      "latencyMs": 1526,
       "featured": true
     },
     {
@@ -466,7 +444,7 @@
         "classics",
         "egypt"
       ],
-      "latencyMs": 1062,
+      "latencyMs": 1548,
       "featured": true
     },
     {
@@ -488,7 +466,7 @@
         "fairuz",
         "lebanon"
       ],
-      "latencyMs": 455,
+      "latencyMs": 1153,
       "featured": true,
       "fallbackUrls": [
         "https://stream.zeno.fm/9vrahqqfuuhvv"
@@ -512,7 +490,7 @@
         "music",
         "lebanon"
       ],
-      "latencyMs": 808,
+      "latencyMs": 1022,
       "featured": true
     },
     {
@@ -533,7 +511,7 @@
         "tarab",
         "palestine"
       ],
-      "latencyMs": 314,
+      "latencyMs": 681,
       "featured": true
     },
     {
@@ -554,7 +532,7 @@
         "tarab",
         "tunisia"
       ],
-      "latencyMs": 1197,
+      "latencyMs": 4228,
       "featured": true
     },
     {
@@ -574,7 +552,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 553
+      "latencyMs": 599
     },
     {
       "id": "af0c6768-565e-411e-81ea-1f6325e3728c",
@@ -593,7 +571,7 @@
         "arabic",
         "quran"
       ],
-      "latencyMs": 472
+      "latencyMs": 712
     },
     {
       "id": "26c23dc4-1b31-473c-a9c4-746d9c7ae77b",
@@ -613,7 +591,7 @@
         "tarab",
         "oldies"
       ],
-      "latencyMs": 950
+      "latencyMs": 1455
     },
     {
       "id": "9e88f54e-7a06-4225-a01e-9644a48d8499",
@@ -635,7 +613,7 @@
         "nostalgic",
         "tarab music"
       ],
-      "latencyMs": 1647
+      "latencyMs": 2342
     },
     {
       "id": "3418b9dd-2eb9-465f-a712-98a2aa408067",
@@ -655,7 +633,7 @@
         "tarab",
         "fairuz"
       ],
-      "latencyMs": 75
+      "latencyMs": 1579
     },
     {
       "id": "2067f466-399f-440b-9b32-70d8832eb46b",
@@ -676,7 +654,7 @@
         "moroccan",
         "oriental"
       ],
-      "latencyMs": 1072
+      "latencyMs": 1251
     },
     {
       "id": "b444dadd-28b2-4dcb-84f2-3e2b73094f24",
@@ -699,7 +677,7 @@
         "beirut",
         "dabke"
       ],
-      "latencyMs": 1188
+      "latencyMs": 1415
     },
     {
       "id": "39215908-b5f6-40d9-875c-57248dfe314a",
@@ -719,7 +697,7 @@
         "music",
         "pop"
       ],
-      "latencyMs": 1003
+      "latencyMs": 1489
     },
     {
       "id": "5769fe09-56d6-11e8-b0ce-52543be04c81",
@@ -738,7 +716,7 @@
         "arabic",
         "music"
       ],
-      "latencyMs": 1990
+      "latencyMs": 2550
     },
     {
       "id": "ac0d65b9-a656-4d0e-a6a5-f4b78770a05f",
@@ -758,7 +736,7 @@
         "music",
         "pop"
       ],
-      "latencyMs": 936
+      "latencyMs": 1449
     },
     {
       "id": "b019fb4e-adfd-43a9-a00d-68e086e0b06f",
@@ -777,7 +755,7 @@
         "arabic",
         "music"
       ],
-      "latencyMs": 1610
+      "latencyMs": 1494
     },
     {
       "id": "bc1e8eb3-a94e-48d7-892a-e790a1599b60",
@@ -800,7 +778,7 @@
         "iraq radio",
         "sumer"
       ],
-      "latencyMs": 205
+      "latencyMs": 243
     },
     {
       "id": "702da7ed-b420-46ee-a962-6e59348fbe6e",
@@ -820,7 +798,7 @@
         "music",
         "80's"
       ],
-      "latencyMs": 1553
+      "latencyMs": 1970
     },
     {
       "id": "b1d17829-6522-481b-bb5c-839c3fd44353",
@@ -840,7 +818,7 @@
         "music",
         "arabic music"
       ],
-      "latencyMs": 1477
+      "latencyMs": 2227
     },
     {
       "id": "9d874da9-550c-4176-a595-8ee83e0c72bc",
@@ -860,7 +838,7 @@
         "music",
         "world music"
       ],
-      "latencyMs": 1274
+      "latencyMs": 1765
     },
     {
       "id": "8dad4ff4-2ae8-4fba-b379-c964f6ae9f4a",
@@ -882,7 +860,7 @@
         "hits",
         "pop"
       ],
-      "latencyMs": 842
+      "latencyMs": 2050
     },
     {
       "id": "6a11c952-ea0c-4887-99a3-96b0139ee3fc",
@@ -905,7 +883,7 @@
         "rap",
         "rap hiphop rnb"
       ],
-      "latencyMs": 883
+      "latencyMs": 2080
     },
     {
       "id": "17e85b1e-1eaf-465e-8753-4178e605f7b9",
@@ -927,7 +905,7 @@
         "hits",
         "pop"
       ],
-      "latencyMs": 1610
+      "latencyMs": 2066
     },
     {
       "id": "a0357a8d-b426-4e35-8d34-3fdd1f17115b",
@@ -950,7 +928,7 @@
         "radio amazigh",
         "radio atbir"
       ],
-      "latencyMs": 1618
+      "latencyMs": 2074
     },
     {
       "id": "7defb860-5ce0-481d-a827-1330c6611686",
@@ -969,7 +947,7 @@
         "arabic",
         "music"
       ],
-      "latencyMs": 1464
+      "latencyMs": 1878
     },
     {
       "id": "fc9b8946-0044-4ed6-ab99-80082e0fa33b",
@@ -992,7 +970,7 @@
         "oriental",
         "variety"
       ],
-      "latencyMs": 2318
+      "latencyMs": 2476
     },
     {
       "id": "eec68cdb-9fde-4a44-81d1-4e752f05fdf5",
@@ -1015,7 +993,7 @@
         "local programming",
         "variety"
       ],
-      "latencyMs": 1428
+      "latencyMs": 1474
     },
     {
       "id": "26eb1c40-f314-4976-8969-a70d1fcce1fc",
@@ -1037,7 +1015,7 @@
         "arabic songs",
         "muscat"
       ],
-      "latencyMs": 1797
+      "latencyMs": 2109
     },
     {
       "id": "09429fd2-e1c0-4f38-ad9a-c4935e466e0f",
@@ -1058,7 +1036,7 @@
         "arabic hits",
         "arabic music"
       ],
-      "latencyMs": 2203
+      "latencyMs": 1389
     },
     {
       "id": "5a23e61f-3313-469d-9346-b07b63ca5b2b",
@@ -1077,7 +1055,7 @@
         "arabic",
         "music"
       ],
-      "latencyMs": 2437
+      "latencyMs": 2164
     },
     {
       "id": "3537590f-8d22-40b9-82d8-cd7dd1a5de44",
@@ -1099,7 +1077,7 @@
         "morocco",
         "star"
       ],
-      "latencyMs": 1276
+      "latencyMs": 1190
     },
     {
       "id": "a7d59f39-4ca5-48b6-a98b-52c171d3dd00",
@@ -1121,7 +1099,7 @@
         "pop",
         "top 40"
       ],
-      "latencyMs": 1277
+      "latencyMs": 1367
     },
     {
       "id": "6a329c2f-af42-4224-83b4-13358dbe5db5",
@@ -1143,7 +1121,7 @@
         "egyptian songs",
         "اغاني كلاسيكيه"
       ],
-      "latencyMs": 859
+      "latencyMs": 1050
     },
     {
       "id": "0502df2d-a93e-4d8a-8547-ae9d341a1128",
@@ -1164,7 +1142,7 @@
         "actualités",
         "morocco"
       ],
-      "latencyMs": 2456
+      "latencyMs": 2580
     },
     {
       "id": "ee24e505-e4e1-4a52-b036-544358008808",
@@ -1186,7 +1164,7 @@
         "radio maroc",
         "radio marocaine"
       ],
-      "latencyMs": 1401
+      "latencyMs": 1824
     },
     {
       "id": "a9d04fb3-fd0e-4dbd-877e-5dd2d5d6e618",
@@ -1209,7 +1187,7 @@
         "la voix de l'espoir",
         "maroc"
       ],
-      "latencyMs": 1001
+      "latencyMs": 954
     },
     {
       "id": "0155ec12-7308-468a-88dc-fcbd440e01da",
@@ -1228,7 +1206,7 @@
         "arabic",
         "quran"
       ],
-      "latencyMs": 1214
+      "latencyMs": 943
     },
     {
       "id": "5e1c31e7-7541-439a-9081-6f78508bb637",
@@ -1247,7 +1225,7 @@
         "arabic",
         "quran"
       ],
-      "latencyMs": 3561
+      "latencyMs": 926
     },
     {
       "id": "6aed851e-a68c-43c6-a0b1-f0bb7476e5d3",
@@ -1266,7 +1244,7 @@
         "arabic",
         "quran"
       ],
-      "latencyMs": 1101
+      "latencyMs": 1111
     },
     {
       "id": "a9bee505-526e-4c7c-bf03-9797bbc8e28b",
@@ -1285,7 +1263,7 @@
         "arabic",
         "quran"
       ],
-      "latencyMs": 1874
+      "latencyMs": 825
     },
     {
       "id": "d3434153-afc3-4bdc-a98b-51ddca3990f1",
@@ -1304,7 +1282,7 @@
         "arabic",
         "quran"
       ],
-      "latencyMs": 1042
+      "latencyMs": 1139
     },
     {
       "id": "8a753c11-ee4a-42bf-8e4d-6d852cac9030",
@@ -1323,7 +1301,7 @@
         "arabic",
         "quran"
       ],
-      "latencyMs": 2672
+      "latencyMs": 832
     },
     {
       "id": "448ba0a5-0c40-4f53-adc6-9d7f8b6e5f6a",
@@ -1345,7 +1323,7 @@
         "islamic",
         "sunni"
       ],
-      "latencyMs": 1375
+      "latencyMs": 1642
     },
     {
       "id": "894f73d0-647d-461b-845c-95d8e14a1e32",
@@ -1368,7 +1346,7 @@
         "islam",
         "islamic"
       ],
-      "latencyMs": 1342
+      "latencyMs": 1070
     },
     {
       "id": "0d468016-910f-497f-b75e-26aed21086e9",
@@ -1390,7 +1368,7 @@
         "recitation",
         "religion"
       ],
-      "latencyMs": 5751
+      "latencyMs": 861
     },
     {
       "id": "a6c8c797-e8b5-4a82-b5eb-756062a17c90",
@@ -1412,7 +1390,7 @@
         "religion",
         "sonnah"
       ],
-      "latencyMs": 1395
+      "latencyMs": 1134
     },
     {
       "id": "77c8094d-6822-4221-be7b-1d54ab477d78",
@@ -1435,7 +1413,7 @@
         "egypt",
         "kuwait"
       ],
-      "latencyMs": 1027
+      "latencyMs": 2146
     },
     {
       "id": "10f95a01-1066-471b-89c5-f9092e73a373",
@@ -1458,7 +1436,7 @@
         "quran radio",
         "saud al-shuraim"
       ],
-      "latencyMs": 1808
+      "latencyMs": 1850
     },
     {
       "id": "cfc734ad-6e1b-4e04-9a4b-6932f2f78ca7",
@@ -1477,7 +1455,7 @@
         "arabic",
         "quran"
       ],
-      "latencyMs": 930
+      "latencyMs": 1022
     },
     {
       "id": "0a97035a-bd76-46da-acbb-894f0876da1f",
@@ -1500,7 +1478,7 @@
         "kuran",
         "kuwait الكويت"
       ],
-      "latencyMs": 1189
+      "latencyMs": 776
     },
     {
       "id": "b90c0167-61a7-4719-ba42-4993eaff4858",
@@ -1519,7 +1497,7 @@
         "arabic",
         "quran"
       ],
-      "latencyMs": 686
+      "latencyMs": 790
     },
     {
       "id": "2cc238bc-2466-4e27-a5ad-af7e02991220",
@@ -1538,7 +1516,7 @@
         "arabic",
         "quran"
       ],
-      "latencyMs": 618
+      "latencyMs": 865
     },
     {
       "id": "f25fc24b-c5b9-4800-8d51-3e26bb89a99d",
@@ -1561,7 +1539,7 @@
         "yasser aldosari",
         "السعودية"
       ],
-      "latencyMs": 1325
+      "latencyMs": 1350
     },
     {
       "id": "a66ea931-c72f-4e37-b880-96a98c1100cd",
@@ -1580,7 +1558,7 @@
         "arabic",
         "quran"
       ],
-      "latencyMs": 974
+      "latencyMs": 1024
     },
     {
       "id": "a182e5ba-a840-40bf-9e51-01bef3ad9e24",
@@ -1602,7 +1580,7 @@
         "mp3",
         "news"
       ],
-      "latencyMs": 400
+      "latencyMs": 708
     },
     {
       "id": "3f402c57-dcd4-4c70-9431-d0b3da3d4a14",
@@ -1621,7 +1599,7 @@
         "arabic",
         "quran"
       ],
-      "latencyMs": 1129
+      "latencyMs": 1237
     },
     {
       "id": "f11a1158-1ee0-4772-bcb0-110522be1e18",
@@ -1644,7 +1622,7 @@
         "jordan",
         "kingdom"
       ],
-      "latencyMs": 641
+      "latencyMs": 1360
     },
     {
       "id": "7cca8bd6-a173-4fca-9a74-ca1e15a631e5",
@@ -1664,7 +1642,7 @@
         "quran",
         "islam"
       ],
-      "latencyMs": 110
+      "latencyMs": 159
     },
     {
       "id": "0ec5f129-e885-49e0-85f2-b7bb55b135e2",
@@ -1685,7 +1663,7 @@
         "dakwah",
         "islam"
       ],
-      "latencyMs": 1459
+      "latencyMs": 1189
     },
     {
       "id": "9121aa97-ef1e-11e8-a471-52543be04c81",
@@ -1704,7 +1682,7 @@
         "arabic",
         "news"
       ],
-      "latencyMs": 509
+      "latencyMs": 833
     },
     {
       "id": "244cf1a8-52d8-4e26-bf23-821a21129bbf",
@@ -1723,7 +1701,7 @@
         "arabic",
         "news"
       ],
-      "latencyMs": 478
+      "latencyMs": 629
     },
     {
       "id": "6b77cd64-68ef-4984-91ec-9b7e77a26eda",
@@ -1746,7 +1724,7 @@
         "local programming",
         "talk"
       ],
-      "latencyMs": 708
+      "latencyMs": 1055
     },
     {
       "id": "075e5897-3bb9-4eaf-a418-ebdd7cba957e",
@@ -1765,7 +1743,7 @@
         "arabic",
         "news"
       ],
-      "latencyMs": 601
+      "latencyMs": 875
     },
     {
       "id": "2c260d07-110c-473c-8a7f-df4b937b31a8",
@@ -1787,7 +1765,7 @@
         "education",
         "talk"
       ],
-      "latencyMs": 4752
+      "latencyMs": 950
     },
     {
       "id": "98688060-6cbe-4f73-be94-da8d8efc2ead",
@@ -1808,7 +1786,7 @@
         "news talk",
         "world news"
       ],
-      "latencyMs": 564
+      "latencyMs": 979
     },
     {
       "id": "580ad1c6-4027-4a38-9e94-97f306d4c7bc",
@@ -1827,7 +1805,7 @@
         "arabic",
         "news"
       ],
-      "latencyMs": 1233
+      "latencyMs": 1991
     },
     {
       "id": "78fe4c57-8bfd-481b-a368-292581e4f6f5",
@@ -1847,7 +1825,7 @@
         "news",
         "music، talk"
       ],
-      "latencyMs": 1222
+      "latencyMs": 1459
     },
     {
       "id": "d706e494-cd28-46ad-ac79-ca49aa0f1a9f",
@@ -1866,7 +1844,7 @@
         "arabic",
         "news"
       ],
-      "latencyMs": 52
+      "latencyMs": 210
     },
     {
       "id": "04e50d31-07d9-4e6a-927a-b22fb034eb3c",
@@ -1886,7 +1864,7 @@
         "news",
         "entertainment"
       ],
-      "latencyMs": 1227
+      "latencyMs": 2067
     },
     {
       "id": "5d9e440c-d634-4473-b56c-8f505ed33302",
@@ -1905,7 +1883,7 @@
         "arabic",
         "news"
       ],
-      "latencyMs": 704
+      "latencyMs": 1013
     },
     {
       "id": "aafa806b-e43e-4b96-8502-7b34f67cd450",
@@ -1928,7 +1906,7 @@
         "local talk",
         "talk radio"
       ],
-      "latencyMs": 415
+      "latencyMs": 1180
     },
     {
       "id": "a481fed1-b46b-44da-9f9b-cc5c4820189b",
@@ -1947,7 +1925,7 @@
         "arabic",
         "news"
       ],
-      "latencyMs": 1784
+      "latencyMs": 2577
     },
     {
       "id": "9a1c3aee-f6b0-419a-8df5-7d3c0a3cbcd9",
@@ -1968,7 +1946,7 @@
         "local talk",
         "news talk"
       ],
-      "latencyMs": 1733
+      "latencyMs": 1934
     },
     {
       "id": "050966be-de77-49f0-bad9-6ef200d219f3",
@@ -1990,7 +1968,7 @@
         "music",
         "pop"
       ],
-      "latencyMs": 53
+      "latencyMs": 214
     },
     {
       "id": "05a799c5-4864-412e-a146-4ecea577b4b0",
@@ -2009,7 +1987,7 @@
         "arabic",
         "news"
       ],
-      "latencyMs": 1552
+      "latencyMs": 3841
     },
     {
       "id": "05fb8b90-3826-4719-b309-0ea5112a4921",
@@ -2030,7 +2008,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 1003
+      "latencyMs": 1683
     },
     {
       "id": "ebbd977c-e0a9-4650-8c3b-9d97b37988a8",
@@ -2051,7 +2029,7 @@
         "الموسيقى العربية",
         "طرب"
       ],
-      "latencyMs": 608
+      "latencyMs": 1421
     },
     {
       "id": "06d8af5e-3f5a-4473-8f71-8343140a938f",
@@ -2072,7 +2050,7 @@
         "international",
         "local radio"
       ],
-      "latencyMs": 1061
+      "latencyMs": 1616
     },
     {
       "id": "92719b50-e730-4ffe-bdaf-d2104c973d02",
@@ -2093,7 +2071,7 @@
         "entertainment",
         "local news"
       ],
-      "latencyMs": 1824
+      "latencyMs": 2528
     },
     {
       "id": "7e64ec2c-d22b-4691-b88a-69456fe02d7c",
@@ -2113,7 +2091,7 @@
         "news",
         "tolk"
       ],
-      "latencyMs": 1423
+      "latencyMs": 2399
     },
     {
       "id": "22f064ab-be27-4e6e-8f34-8d6509c97007",
@@ -2134,7 +2112,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 1119
+      "latencyMs": 3127
     },
     {
       "id": "c9802580-7f04-46ea-be34-d8d0b98e8710",
@@ -2154,7 +2132,7 @@
         "news",
         "international news"
       ],
-      "latencyMs": 1632
+      "latencyMs": 5859
     },
     {
       "id": "e3ecb332-be77-4641-9b52-39cb4e79e042",
@@ -2177,7 +2155,7 @@
         "paris",
         "radio maghreb"
       ],
-      "latencyMs": 1333
+      "latencyMs": 3921
     },
     {
       "id": "c6c77aaf-e899-463d-a9f5-a556180a4f82",
@@ -2198,7 +2176,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 851
+      "latencyMs": 2996
     },
     {
       "id": "38ba2533-565e-4ebf-a76b-4498d6ce1203",
@@ -2219,7 +2197,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 805
+      "latencyMs": 3105
     },
     {
       "id": "29e75334-77df-4a21-bce3-258197bfbb18",
@@ -2240,7 +2218,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 837
+      "latencyMs": 4281
     },
     {
       "id": "961a5858-0601-11e8-ae97-52543be04c81",
@@ -2259,7 +2237,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 906
+      "latencyMs": 2958
     },
     {
       "id": "368ef657-f8b5-47ce-b578-337e401cc744",
@@ -2278,7 +2256,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 208
+      "latencyMs": 246
     },
     {
       "id": "2ca459a9-367a-4184-a14b-9a0f67f7ad5c",
@@ -2297,7 +2275,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1225
+      "latencyMs": 5037
     },
     {
       "id": "763cd182-7216-4830-b39a-3258e2422a78",
@@ -2316,7 +2294,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1235
+      "latencyMs": 3482
     },
     {
       "id": "e5619870-9002-4b2c-9f0f-a6e6664a40dd",
@@ -2335,7 +2313,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 65
+      "latencyMs": 220
     },
     {
       "id": "688986ac-3229-4adc-a96c-fcfe079328fe",
@@ -2354,7 +2332,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 54
+      "latencyMs": 216
     },
     {
       "id": "f483fc26-d6c7-4d16-8b81-03e4e8683643",
@@ -2373,7 +2351,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1056
+      "latencyMs": 2957
     },
     {
       "id": "0b6caf55-392b-470e-84fd-db518a9cadc1",
@@ -2392,7 +2370,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1450
+      "latencyMs": 4852
     },
     {
       "id": "89a65395-9af4-4c9d-9300-d765029785e8",
@@ -2411,7 +2389,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1738
+      "latencyMs": 4653
     },
     {
       "id": "3b20727f-de34-40b3-84ba-f7ba1ed9821b",
@@ -2431,7 +2409,7 @@
         "variety",
         "ilstations"
       ],
-      "latencyMs": 928
+      "latencyMs": 3211
     },
     {
       "id": "ffcdc7e1-089e-4dfb-b11f-c2dcb26ef923",
@@ -2450,7 +2428,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 53
+      "latencyMs": 212
     },
     {
       "id": "9637cdcf-0601-11e8-ae97-52543be04c81",
@@ -2470,7 +2448,7 @@
         "variety",
         "eurodance"
       ],
-      "latencyMs": 718
+      "latencyMs": 2657
     },
     {
       "id": "d275b356-1068-4012-a46a-46e340e12ab9",
@@ -2489,7 +2467,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 210
+      "latencyMs": 4439
     },
     {
       "id": "961e4e29-0601-11e8-ae97-52543be04c81",
@@ -2508,7 +2486,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 922
+      "latencyMs": 4268
     },
     {
       "id": "d241e555-9691-46fb-bbe2-7573b6d14e4d",
@@ -2527,7 +2505,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1900
+      "latencyMs": 5043
     },
     {
       "id": "df4fc0be-f064-41fc-9b3e-d729f0a8fa1c",
@@ -2546,7 +2524,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 849
+      "latencyMs": 3372
     },
     {
       "id": "e2d75665-c4a9-4433-b953-3a5346ae5fb6",
@@ -2568,7 +2546,7 @@
         "film",
         "movie"
       ],
-      "latencyMs": 1129
+      "latencyMs": 3840
     },
     {
       "id": "27db183f-6aaa-421d-885f-786b172c5b9c",
@@ -2587,7 +2565,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 687
+      "latencyMs": 3044
     },
     {
       "id": "cd5a924a-29a6-4114-84ef-8effa816cfa7",
@@ -2607,7 +2585,7 @@
         "variety",
         "various"
       ],
-      "latencyMs": 421
+      "latencyMs": 512
     },
     {
       "id": "7eb9e8cd-bf7f-4bcc-afe2-3f56608911e6",
@@ -2627,7 +2605,7 @@
         "variety",
         "romance"
       ],
-      "latencyMs": 65
+      "latencyMs": 3418
     },
     {
       "id": "fa5ae1db-2562-433b-9bcb-10a4165b5a89",
@@ -2646,7 +2624,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 859
+      "latencyMs": 3501
     },
     {
       "id": "2f91a94c-c986-4799-8553-2258069628c6",
@@ -2665,7 +2643,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 775
+      "latencyMs": 3300
     },
     {
       "id": "701b70e7-2126-4b4b-b1db-ea5295b43bfe",
@@ -2684,7 +2662,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 54
+      "latencyMs": 3041
     },
     {
       "id": "30a739aa-0ef2-484c-a45a-4be7fbcb9603",
@@ -2705,7 +2683,7 @@
         "radio drama",
         "radiodrama"
       ],
-      "latencyMs": 54
+      "latencyMs": 213
     },
     {
       "id": "360b1f57-2534-11e9-a80b-52543be04c81",
@@ -2724,7 +2702,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1018
+      "latencyMs": 3158
     },
     {
       "id": "12a6599c-f8bf-47c6-9f92-19b2dd189ebb",
@@ -2743,7 +2721,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1215
+      "latencyMs": 3249
     },
     {
       "id": "07f54ac3-ef7d-4d27-9466-1a5fafcc5130",
@@ -2762,7 +2740,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1478
+      "latencyMs": 3759
     },
     {
       "id": "7bcabdad-dc4e-4a92-a935-30289f8ce368",
@@ -2781,7 +2759,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1473
+      "latencyMs": 4104
     },
     {
       "id": "24718db6-7ced-4a28-a7de-e0c09eeb0095",
@@ -2800,7 +2778,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1521
+      "latencyMs": 3568
     },
     {
       "id": "2c82c815-59af-4eb3-80b6-43e4ad80bea2",
@@ -2820,7 +2798,7 @@
         "quran",
         "religious"
       ],
-      "latencyMs": 1549
+      "latencyMs": 4077
     },
     {
       "id": "2b1ad85e-2a5b-4c83-9a98-62e84d188cd8",
@@ -2840,7 +2818,7 @@
         "quran",
         "religious"
       ],
-      "latencyMs": 1467
+      "latencyMs": 3090
     },
     {
       "id": "38bb16a5-7996-442d-a03f-3cccf0aa8bb7",
@@ -2859,7 +2837,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1325
+      "latencyMs": 3228
     },
     {
       "id": "261a7a31-985c-4561-9bc3-fa3b35d3a3ab",
@@ -2878,7 +2856,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1039
+      "latencyMs": 2617
     },
     {
       "id": "d120bfd3-1326-4685-91e8-08e5f410a75e",
@@ -2897,7 +2875,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1004
+      "latencyMs": 3959
     },
     {
       "id": "cfc5906d-682e-4735-8d35-24c9b4b0e1d2",
@@ -2916,7 +2894,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 52
+      "latencyMs": 2674
     },
     {
       "id": "90820569-1212-4a17-a61c-71280abd15a2",
@@ -2935,7 +2913,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1624
+      "latencyMs": 4788
     },
     {
       "id": "a4cc08fb-cfad-41a4-9672-9a710542f612",
@@ -2954,7 +2932,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 85
+      "latencyMs": 2653
     },
     {
       "id": "0b300680-fb8d-4a73-a05b-76f669cd8881",
@@ -2975,7 +2953,7 @@
         "bahrain",
         "bahrain fm 93.3"
       ],
-      "latencyMs": 1574
+      "latencyMs": 3170
     },
     {
       "id": "69459a0b-9f41-4f97-a54d-561e5e077442",
@@ -2994,7 +2972,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 654
+      "latencyMs": 858
     },
     {
       "id": "3e1a2014-d426-4f74-b237-8c109054911e",
@@ -3015,7 +2993,7 @@
         "bahrain",
         "islam"
       ],
-      "latencyMs": 1507
+      "latencyMs": 2716
     },
     {
       "id": "06e1ce15-a839-4bd6-9d77-6c4c32eb75cc",
@@ -3035,7 +3013,7 @@
         "quran",
         "religious"
       ],
-      "latencyMs": 1116
+      "latencyMs": 2456
     },
     {
       "id": "bd561679-5317-4a66-8393-c6f06970792d",
@@ -3054,7 +3032,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1412
+      "latencyMs": 2807
     },
     {
       "id": "5b074abe-974b-4065-87ee-27dc8612edbe",
@@ -3073,7 +3051,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1539
+      "latencyMs": 3218
     },
     {
       "id": "80342280-d3f9-4d61-8443-d3e415e89fb4",
@@ -3092,7 +3070,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1586
+      "latencyMs": 2831
     },
     {
       "id": "8cd9d640-ed84-4584-82e2-36567c23249b",
@@ -3111,7 +3089,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 2080
+      "latencyMs": 3903
     },
     {
       "id": "cb9d0283-160c-40a6-8322-f59f90bc3975",
@@ -3133,7 +3111,7 @@
         "culture",
         "independent"
       ],
-      "latencyMs": 1333
+      "latencyMs": 2691
     },
     {
       "id": "9793ba8c-91b0-4109-b053-d88a29bc2672",
@@ -3153,7 +3131,7 @@
         "variety",
         "sudanese varieties radio"
       ],
-      "latencyMs": 65
+      "latencyMs": 220
     },
     {
       "id": "bd4c6426-6d27-42a9-a1d1-d0084cba5138",
@@ -3172,7 +3150,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 348
+      "latencyMs": 2875
     },
     {
       "id": "7fcb9e0d-803e-4c4a-8c50-a7679084546d",
@@ -3192,7 +3170,7 @@
         "variety",
         "world middle east"
       ],
-      "latencyMs": 956
+      "latencyMs": 1999
     },
     {
       "id": "067ee4b5-2d94-4888-8eb4-cc5b17da1fff",
@@ -3211,7 +3189,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1987
+      "latencyMs": 2865
     },
     {
       "id": "93a0d452-a064-4ddb-b0f2-eec75693acfb",
@@ -3230,7 +3208,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1308
+      "latencyMs": 2038
     },
     {
       "id": "0352d949-cfe9-4c89-8540-00069791b5d6",
@@ -3249,7 +3227,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 3440
+      "latencyMs": 4725
     },
     {
       "id": "f221e5e9-8d01-4906-bd6b-2e8985dbbea7",
@@ -3269,7 +3247,7 @@
         "variety",
         "rhb"
       ],
-      "latencyMs": 52
+      "latencyMs": 211
     },
     {
       "id": "38ebb90e-1fce-4884-9d60-98dab8fc4520",
@@ -3289,7 +3267,7 @@
         "variety",
         "misic"
       ],
-      "latencyMs": 849
+      "latencyMs": 1704
     },
     {
       "id": "b982c5dc-a5f6-4319-834f-4145127e068a",
@@ -3308,7 +3286,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1495
+      "latencyMs": 1810
     },
     {
       "id": "a5acbf43-ebe5-41b9-aba0-a21388484e39",
@@ -3327,7 +3305,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1990
+      "latencyMs": 2991
     },
     {
       "id": "ed186ea7-ac3e-47f5-bf33-99fbb15ffc86",
@@ -3347,7 +3325,7 @@
         "variety",
         "local radio"
       ],
-      "latencyMs": 127
+      "latencyMs": 174
     },
     {
       "id": "bd84b392-7ca7-486e-9a84-585a7f2c16af",
@@ -3366,7 +3344,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1284
+      "latencyMs": 1466
     },
     {
       "id": "34f16bc1-bbe6-43ba-b859-e6f88aa47f9b",
@@ -3387,7 +3365,7 @@
         "debates y deportes",
         "noticias"
       ],
-      "latencyMs": 2331
+      "latencyMs": 2673
     },
     {
       "id": "5e489ee4-30fe-4933-a0b8-3d739a866d30",
@@ -3410,7 +3388,7 @@
         "90's",
         "oldies"
       ],
-      "latencyMs": 2444
+      "latencyMs": 2420
     },
     {
       "id": "17f0a0b9-ee71-4681-9fc9-7d0823cb6fb4",
@@ -3431,7 +3409,7 @@
         "debates y deportes",
         "noticias"
       ],
-      "latencyMs": 2949
+      "latencyMs": 2939
     },
     {
       "id": "feddd190-e5ff-4a0a-93c2-90068dd04608",
@@ -3450,7 +3428,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1939
+      "latencyMs": 1512
     },
     {
       "id": "becb9c74-b124-4c1f-a0dc-ad91ae395978",
@@ -3469,7 +3447,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 2383
+      "latencyMs": 2439
     },
     {
       "id": "948f53ca-9253-4383-8339-83aea217ec17",
@@ -3488,7 +3466,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1826
+      "latencyMs": 1751
     },
     {
       "id": "e313b22d-afdd-4265-94da-1081e30a3e26",
@@ -3507,7 +3485,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 2243
+      "latencyMs": 2250
     },
     {
       "id": "f07420b2-244c-45fd-aa5a-321f4dbf8df6",
@@ -3529,7 +3507,7 @@
         "news",
         "religion"
       ],
-      "latencyMs": 139
+      "latencyMs": 190
     },
     {
       "id": "76e40aad-e677-4eb5-a2a5-8fac3e51e1ae",
@@ -3549,7 +3527,7 @@
         "variety",
         "religious"
       ],
-      "latencyMs": 1898
+      "latencyMs": 2264
     },
     {
       "id": "3ca6ceb6-c394-4b44-b151-6f5add5cd100",
@@ -3570,7 +3548,7 @@
         "debates y deportes",
         "noticias"
       ],
-      "latencyMs": 2515
+      "latencyMs": 2586
     },
     {
       "id": "52691bbc-72f0-4b1c-93f0-2a0fd13d9018",
@@ -3590,7 +3568,7 @@
         "variety",
         "mix"
       ],
-      "latencyMs": 1529
+      "latencyMs": 1873
     },
     {
       "id": "9f2d0bd8-689a-425f-8456-7ed239d6990e",
@@ -3610,7 +3588,7 @@
         "variety",
         "arabic songs"
       ],
-      "latencyMs": 64
+      "latencyMs": 222
     },
     {
       "id": "f76343e1-ff9d-4b76-b576-c64aedf9eb77",
@@ -3629,7 +3607,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 2741
+      "latencyMs": 3126
     },
     {
       "id": "f71a3519-72a7-4d22-96d7-c54f2d2c31d6",
@@ -3650,7 +3628,7 @@
         "dance",
         "edm"
       ],
-      "latencyMs": 52
+      "latencyMs": 226
     },
     {
       "id": "e68ac2a4-9abc-4eea-a390-b0426864e503",
@@ -3669,7 +3647,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 2446
+      "latencyMs": 3128
     },
     {
       "id": "f2bce1ef-81b1-41cd-9052-8d3213ae2031",
@@ -3689,7 +3667,7 @@
         "news",
         "national radio"
       ],
-      "latencyMs": 2637
+      "latencyMs": 3337
     },
     {
       "id": "2bff5955-3a88-46cd-92e9-57033683a7f0",
@@ -3710,7 +3688,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 195
+      "latencyMs": 2732
     },
     {
       "id": "488ff7d6-84fd-4a97-818d-6dbddfc84471",
@@ -3729,7 +3707,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1928
+      "latencyMs": 2521
     },
     {
       "id": "5c9aa341-31f9-4c76-a5b8-aea612006ff9",
@@ -3751,7 +3729,7 @@
         "folk",
         "pop"
       ],
-      "latencyMs": 2877
+      "latencyMs": 3977
     },
     {
       "id": "2eb104a6-a4a7-427e-a171-40836325624a",
@@ -3770,7 +3748,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 2145
+      "latencyMs": 2887
     },
     {
       "id": "5d0a7faa-25c4-4385-9d9e-aa4e89213c6f",
@@ -3793,7 +3771,7 @@
         "marrakech",
         "morocco"
       ],
-      "latencyMs": 2060
+      "latencyMs": 2719
     },
     {
       "id": "5f344328-0823-42fa-b2c5-39375543bbee",
@@ -3814,7 +3792,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 204
+      "latencyMs": 3712
     },
     {
       "id": "48976256-27d8-4364-81fe-68757078dce2",
@@ -3834,7 +3812,7 @@
         "music",
         "islam music"
       ],
-      "latencyMs": 361
+      "latencyMs": 498
     },
     {
       "id": "6551c8a6-c2e5-48d4-8dd0-21af391f205d",
@@ -3854,7 +3832,7 @@
         "variety",
         "arab"
       ],
-      "latencyMs": 1276
+      "latencyMs": 2942
     },
     {
       "id": "3a2be197-6831-4db2-9e4e-0208b714e738",
@@ -3875,7 +3853,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 1922
+      "latencyMs": 3135
     },
     {
       "id": "13f7e33d-2b28-4c73-9634-e49ee2c0ae99",
@@ -3895,7 +3873,7 @@
         "music",
         "world music"
       ],
-      "latencyMs": 2902
+      "latencyMs": 4449
     },
     {
       "id": "d9bbea87-9051-45cb-abe6-8992a7a76cf1",
@@ -3918,7 +3896,7 @@
         "fda",
         "health"
       ],
-      "latencyMs": 1800
+      "latencyMs": 3164
     },
     {
       "id": "cc6747c6-64ff-4ac3-88f5-08791402ad5e",
@@ -3939,7 +3917,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 2233
+      "latencyMs": 3283
     },
     {
       "id": "d1c087ac-267a-425e-8dc5-6ba4644e5249",
@@ -3960,7 +3938,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 2101
+      "latencyMs": 3270
     },
     {
       "id": "4987accb-73cd-4571-b5da-1f341f7255f8",
@@ -3979,7 +3957,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 2828
+      "latencyMs": 6444
     },
     {
       "id": "ea1c2e79-8c0a-4873-b8a4-260a9d364c68",
@@ -3998,7 +3976,7 @@
         "arabic",
         "music"
       ],
-      "latencyMs": 1792
+      "latencyMs": 3264
     },
     {
       "id": "f622d310-df86-4ffb-850e-4941e364c22b",
@@ -4017,7 +3995,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 2108
+      "latencyMs": 4481
     },
     {
       "id": "9f26b055-db67-447a-81e6-ddb5c8c40dc3",
@@ -4038,7 +4016,7 @@
         "culture",
         "music"
       ],
-      "latencyMs": 53
+      "latencyMs": 3060
     },
     {
       "id": "2cb54ac0-37d7-4742-8259-18e07a6cb2c7",
@@ -4061,7 +4039,7 @@
         "islam",
         "mp3quran"
       ],
-      "latencyMs": 497
+      "latencyMs": 2676
     },
     {
       "id": "8efd6d38-d14b-4a09-853c-10df4d012de7",
@@ -4082,7 +4060,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 236
+      "latencyMs": 216
     },
     {
       "id": "1caeea47-6bee-411a-aa51-d11f172b9e4e",
@@ -4103,7 +4081,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 2217
+      "latencyMs": 2891
     },
     {
       "id": "1fa1ad84-e008-4af2-9a61-1b37daeb34ff",
@@ -4124,7 +4102,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 1757
+      "latencyMs": 3096
     },
     {
       "id": "4caa43a0-ed29-44f4-bb5d-47042a46c6c4",
@@ -4144,7 +4122,7 @@
         "news",
         "local radio"
       ],
-      "latencyMs": 243
+      "latencyMs": 192
     },
     {
       "id": "3755cc7b-1da6-40f7-b618-5a8a6f82490f",
@@ -4166,7 +4144,7 @@
         "folk",
         "talk"
       ],
-      "latencyMs": 1808
+      "latencyMs": 3143
     },
     {
       "id": "7f20b1bf-091a-4f2e-a1fc-4a1f87227ee3",
@@ -4186,7 +4164,7 @@
         "variety",
         "world middle east"
       ],
-      "latencyMs": 148
+      "latencyMs": 486
     },
     {
       "id": "a1887b6d-dee2-48be-8770-cbdef7951a3e",
@@ -4207,7 +4185,7 @@
         "culture",
         "music"
       ],
-      "latencyMs": 1994
+      "latencyMs": 3098
     },
     {
       "id": "279b39aa-6e80-4e2a-bb3f-f68f8cf9b6c8",
@@ -4228,7 +4206,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 2135
+      "latencyMs": 3778
     },
     {
       "id": "1b78d198-f777-46a5-8797-8bb023de8db5",
@@ -4249,7 +4227,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 2873
+      "latencyMs": 3691
     },
     {
       "id": "e8676934-ceb6-47ce-8360-9a06a6f21fa3",
@@ -4268,7 +4246,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 2019
+      "latencyMs": 3714
     },
     {
       "id": "60044cf2-2d50-40e8-a4c6-be956bc3e74a",
@@ -4289,7 +4267,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 2023
+      "latencyMs": 3140
     },
     {
       "id": "7d3a9ce0-e63b-4518-b8cf-c0513727c376",
@@ -4310,7 +4288,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 2146
+      "latencyMs": 3008
     },
     {
       "id": "2a972250-15f4-426c-8eae-f282a3dde53f",
@@ -4331,7 +4309,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 127
+      "latencyMs": 2934
     },
     {
       "id": "aa7e35fb-8b75-425f-8710-3cbd64eefd7d",
@@ -4352,7 +4330,7 @@
         "local",
         "music"
       ],
-      "latencyMs": 2292
+      "latencyMs": 3137
     },
     {
       "id": "5e4a8b51-500a-4f3d-84fc-24c2d358f242",
@@ -4371,7 +4349,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 2092
+      "latencyMs": 2923
     },
     {
       "id": "b9e8c4bc-72e7-4bdd-bbe8-4267fc7874e0",
@@ -4392,7 +4370,7 @@
         "talk",
         "tunisia"
       ],
-      "latencyMs": 1724
+      "latencyMs": 2715
     },
     {
       "id": "06236334-a972-436b-bb36-7f0c91765520",
@@ -4413,7 +4391,7 @@
         "talk",
         "tunisia"
       ],
-      "latencyMs": 1731
+      "latencyMs": 2879
     },
     {
       "id": "55fe42e3-74dc-4a71-80e3-87ac0d0f8a6b",
@@ -4435,7 +4413,7 @@
         "education",
         "talk"
       ],
-      "latencyMs": 1690
+      "latencyMs": 2918
     },
     {
       "id": "f192a296-1fbc-4a7c-ab8f-d09221f4a3b6",
@@ -4456,7 +4434,7 @@
         "pop",
         "top40"
       ],
-      "latencyMs": 2107
+      "latencyMs": 3277
     },
     {
       "id": "e266ecb9-493b-40b7-8cc7-4ccff9a75665",
@@ -4479,7 +4457,7 @@
         "orthodox church",
         "orthodoxy"
       ],
-      "latencyMs": 1730
+      "latencyMs": 2791
     },
     {
       "id": "20b25ce0-3d92-43f8-9b99-d2c5b47baf26",
@@ -4498,7 +4476,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 2152
+      "latencyMs": 2835
     },
     {
       "id": "7952740a-c6b3-4bd0-8db6-3728c1a94a2d",
@@ -4521,7 +4499,7 @@
         "variety",
         "world middle east"
       ],
-      "latencyMs": 1761
+      "latencyMs": 2953
     },
     {
       "id": "46d54920-eece-4b59-b6f9-9ef271c41371",
@@ -4541,7 +4519,7 @@
         "quran",
         "islamic"
       ],
-      "latencyMs": 54
+      "latencyMs": 1908
     },
     {
       "id": "c6d71255-a5e0-4631-a605-ff9eed2d092c",
@@ -4561,7 +4539,7 @@
         "variety",
         "oldies"
       ],
-      "latencyMs": 1001
+      "latencyMs": 1799
     },
     {
       "id": "c4a64f1f-b77d-47b2-8187-f472a52669c3",
@@ -4580,7 +4558,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1342
+      "latencyMs": 2172
     },
     {
       "id": "9ded7036-a3d3-47a4-ab4d-da8c9ba2c4d3",
@@ -4599,7 +4577,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 941
+      "latencyMs": 1721
     },
     {
       "id": "de55427f-864f-453b-83e6-caf8f8bfb1a1",
@@ -4620,7 +4598,7 @@
         "dance",
         "remix"
       ],
-      "latencyMs": 790
+      "latencyMs": 1143
     },
     {
       "id": "860e4b99-6ffe-4b2b-8a24-e103b7a95ace",
@@ -4641,7 +4619,7 @@
         "hits",
         "pop"
       ],
-      "latencyMs": 54
+      "latencyMs": 1760
     },
     {
       "id": "bfc08897-31fa-4d40-9a37-a84d5cd4616c",
@@ -4660,7 +4638,7 @@
         "arabic",
         "music"
       ],
-      "latencyMs": 1174
+      "latencyMs": 1507
     },
     {
       "id": "dc0d3b6b-e150-4896-b329-23c250797298",
@@ -4681,7 +4659,7 @@
         "folk",
         "oldies"
       ],
-      "latencyMs": 970
+      "latencyMs": 1161
     },
     {
       "id": "4816b63c-92a4-4ece-a464-7f16b2b58936",
@@ -4700,7 +4678,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 1380
+      "latencyMs": 1624
     },
     {
       "id": "82a5c307-2dd2-4166-a455-11866a40be3b",
@@ -4719,7 +4697,7 @@
         "arabic",
         "variety"
       ],
-      "latencyMs": 65
+      "latencyMs": 1102
     },
     {
       "id": "c19661d7-33a1-450e-ba92-95fa10485446",
@@ -4739,7 +4717,7 @@
         "news",
         "talk"
       ],
-      "latencyMs": 1862
+      "latencyMs": 1622
     },
     {
       "id": "1ee6530c-1890-4fbe-807f-69135a8c6f49",
@@ -4760,7 +4738,7 @@
         "arabic pop",
         "music"
       ],
-      "latencyMs": 2618
+      "latencyMs": 1797
     }
   ]
 }
