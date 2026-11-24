@@ -2,6 +2,15 @@ name: Build Android Release AAB
 
 on:
   workflow_dispatch:
+    inputs:
+      format:
+        description: 'Artifact format to build (aab for Play Store, apk for direct Android install)'
+        required: true
+        default: 'aab'
+        type: choice
+        options:
+          - aab
+          - apk
 
 jobs:
   build-aab:
@@ -57,32 +66,62 @@ jobs:
           grep -q "ANDROID_KEYSTORE_PATH" android/app/build.gradle*
           grep -q "com.almojor.itarab" android/app/build.gradle*
 
-      - name: Build signed Android App Bundle (.aab)
+      - name: Build signed Android release (${{ inputs.format || 'aab' }})
         env:
           ANDROID_KEYSTORE_PATH: ${{ runner.temp }}/itarab-upload.keystore
           ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
+          FORMAT="${{ inputs.format || 'aab' }}"
           cd android
-          ./gradlew bundleRelease --no-daemon
-
-      - name: Verify AAB release signature
-        run: |
-          AAB_PATH="android/app/build/outputs/bundle/release/app-release.aab"
-          test -f "$AAB_PATH"
-          SIG_OUT="$(jarsigner -verify -verbose -certs "$AAB_PATH")"
-          echo "$SIG_OUT"
-          if echo "$SIG_OUT" | grep -q "CN=Android Debug"; then
-            echo "ERROR: AAB is signed with Android Debug key!"
-            exit 1
+          if [ "$FORMAT" = "apk" ]; then
+            ./gradlew assembleRelease --no-daemon
+          else
+            ./gradlew bundleRelease --no-daemon
           fi
-          ls -lh "$AAB_PATH"
 
-      - name: Upload signed Android App Bundle
+      - name: Verify release signature
+        run: |
+          FORMAT="${{ inputs.format || 'aab' }}"
+          if [ "$FORMAT" = "apk" ]; then
+            APK_PATH="android/app/build/outputs/apk/release/app-release.apk"
+            test -f "$APK_PATH"
+            SDK_ROOT="${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
+            APKSIGNER="$(ls -d "$SDK_ROOT"/build-tools/*/apksigner | sort -V | tail -n 1)"
+            SIG_OUT="$("$APKSIGNER" verify --print-certs "$APK_PATH")"
+            echo "$SIG_OUT"
+            if echo "$SIG_OUT" | grep -q "CN=Android Debug"; then
+              echo "ERROR: APK is signed with Android Debug key!"
+              exit 1
+            fi
+            ls -lh "$APK_PATH"
+          else
+            AAB_PATH="android/app/build/outputs/bundle/release/app-release.aab"
+            test -f "$AAB_PATH"
+            SIG_OUT="$(jarsigner -verify -verbose -certs "$AAB_PATH")"
+            echo "$SIG_OUT"
+            if echo "$SIG_OUT" | grep -q "CN=Android Debug"; then
+              echo "ERROR: AAB is signed with Android Debug key!"
+              exit 1
+            fi
+            ls -lh "$AAB_PATH"
+          fi
+
+      - name: Upload signed Android App Bundle (.aab)
+        if: inputs.format != 'apk'
         uses: actions/upload-artifact@v4
         with:
           name: itarab-radio-android-aab
           path: android/app/build/outputs/bundle/release/app-release.aab
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Upload signed Android APK (.apk)
+        if: inputs.format == 'apk'
+        uses: actions/upload-artifact@v4
+        with:
+          name: itarab-radio-android-apk
+          path: android/app/build/outputs/apk/release/app-release.apk
           if-no-files-found: error
           retention-days: 1
