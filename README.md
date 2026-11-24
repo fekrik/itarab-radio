@@ -57,11 +57,17 @@ You can ship this Expo rewrite as an update to the existing App Store listing so
    - Upload updated screenshots for current iPhone / iPad display sizes.
 
 ### Publishing to Google Play (Android)
-```bash
-npx expo prebuild --platform android --clean
-cd android && ./gradlew bundleRelease
-```
-Upload the generated `.aab` file from `android/app/build/outputs/bundle/release/app-release.aab` to Google Play Console.
+
+- Package name: `com.almojor.itarab` (`versionCode` in `app.json`)
+- Signing config plugin: `plugins/withAndroidReleaseSigning.js`
+- **Free GitHub Actions Release Build (`$0`, no local Android SDK required):**
+  Trigger **Actions → Build Android Release AAB** (`.github/workflows/build-android.yml`) to build and sign `app-release.aab` using encrypted repository secrets, then download the `itarab-radio-android-aab` artifact and upload to Google Play Console.
+- **Local Gradle Build (optional, if Android SDK + JDK 17 are installed):**
+  ```bash
+  npx expo prebuild --platform android --clean
+  cd android && ./gradlew bundleRelease
+  ```
+  The generated `.aab` appears at `android/app/build/outputs/bundle/release/app-release.aab`.
 
 ---
 

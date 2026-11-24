@@ -19,7 +19,8 @@
           "microphonePermission": false,
           "recordAudioAndroid": false
         }
-      ]
+      ],
+      "./plugins/withAndroidReleaseSigning"
     ],
     "ios": {
       "supportsTablet": true,
@@ -35,7 +36,8 @@
       }
     },
     "android": {
-      "package": "com.almojor.itarabradio",
+      "package": "com.almojor.itarab",
+      "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#0B0D14",
         "foregroundImage": "./assets/android-icon-foreground.png",
