@@ -501,7 +501,6 @@ const RELIGIOUS_RE =
 const BLOCKED_STATION_IDS = new Set([
   '82a5c307-2dd2-4166-a455-11866a40be3b', // عبد الله سراج الدين (Islamic scholar lectures)
   'f11a1158-1ee0-4772-bcb0-110522be1e18', // Hayat FM (JO), Islamic station
-  '3e1a2014-d426-4f74-b237-8c109054911e', // Bahrain 106.1 FM, Quran station
   'a6c8c797-e8b5-4a82-b5eb-756062a17c90', // Zitouna FM, Quran station
   '448ba0a5-0c40-4f53-adc6-9d7f8b6e5f6a', // Darusalam Radio
   '2c82c815-59af-4eb3-80b6-43e4ad80bea2', // Almunir Radio Tripoli
@@ -515,8 +514,14 @@ const BLOCKED_STATION_IDS = new Set([
   '0ec5f129-e885-49e0-85f2-b7bb55b135e2', // Radio Indah Siar Cirebon (Indonesian Islamic)
 ]);
 
+// Stations Fekri chose to keep even though Radio-Browser tags them as religious.
+const KEEP_STATION_IDS = new Set([
+  '3e1a2014-d426-4f74-b237-8c109054911e', // Bahrain 106.1 FM
+]);
+
 function isReligiousStation(st) {
   if (!st) return false;
+  if (KEEP_STATION_IDS.has(st.id)) return false;
   if (st.category === 'quran' || st.category === 'religious') return true;
   if (BLOCKED_STATION_IDS.has(st.id)) return true;
   const tags = Array.isArray(st.tags) ? st.tags.join(' ') : String(st.tags || '');
@@ -994,8 +999,9 @@ async function curateCatalog() {
     seenFinalUrls.add(finalNorm);
     passedCount++;
 
-    const category = categorizeStation(cleanName, raw.tags || '', winner.streamUrl);
-    if (category === 'religious' || isReligiousStation({ id: raw.stationuuid, name: cleanName, tags: raw.tags || '', streamUrl: winner.streamUrl })) {
+    let category = categorizeStation(cleanName, raw.tags || '', winner.streamUrl);
+    if (category === 'religious' && KEEP_STATION_IDS.has(raw.stationuuid)) category = 'variety';
+    if ((category === 'religious' && !KEEP_STATION_IDS.has(raw.stationuuid)) || isReligiousStation({ id: raw.stationuuid, name: cleanName, tags: raw.tags || '', streamUrl: winner.streamUrl })) {
       return null;
     }
     const baseId = raw.stationuuid || `${country.code.toLowerCase()}-${slugify(cleanName)}`;

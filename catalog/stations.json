@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAt": "2026-11-25T04:02:59.134Z",
-  "stationCount": 194,
+  "stationCount": 195,
   "categories": [
     {
       "id": "tarab",
@@ -3994,6 +3994,27 @@
         "music"
       ],
       "latencyMs": 1797
+    },
+    {
+      "id": "3e1a2014-d426-4f74-b237-8c109054911e",
+      "name": "Bahrain 106.1 FM",
+      "countryCode": "BH",
+      "country": "Bahrain",
+      "countryAr": "البحرين",
+      "flag": "🇧🇭",
+      "category": "variety",
+      "streamUrl": "https://5c7b683162943.streamlock.net/live/ngrp:radio-106-1_all/playlist.m3u8",
+      "codec": "HLS",
+      "bitrate": 1066,
+      "isHls": true,
+      "logoUrl": "https://www.mia.gov.bh/wp-content/uploads/2023/02/cropped-Royal-Emblem-192x192.png",
+      "tags": [
+        "arabic",
+        "variety",
+        "bahrain",
+        "islam"
+      ],
+      "latencyMs": 2716
     }
   ]
 }
