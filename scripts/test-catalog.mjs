@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 const STATIONS_JSON_PATH = path.join(ROOT_DIR, 'catalog', 'stations.json');
 
-const VALID_CATEGORIES = new Set(['tarab', 'music', 'quran', 'news', 'variety']);
+const VALID_CATEGORIES = new Set(['tarab', 'music', 'news', 'variety']);
 const EPHEMERAL_RE = /(surfernetwork\.com|[?&](zt|token|exp|expires|sig|signature|hdnea|auth|rj-tok|rj-ttl)=)/i;
 
 function normalizeSearchText(input) {
@@ -103,6 +103,15 @@ async function run() {
     );
   }
 
+  // iTarab Radio is music & news only; religious stations live in the Islamic Radio app.
+  const religiousRe = /(quran|qoran|coran|koran|قرآن|القران|تلاوة|القارئ|الشيخ|sheikh)/i;
+  const religious = catalog.stations.filter((s) => religiousRe.test(`${s.name} ${s.streamUrl}`));
+  assert.equal(religious.length, 0, `Religious stations found: ${religious.map((s) => s.name).join(', ')}`);
+  assert.ok(
+    !catalog.categories.some((c) => c.id === 'quran'),
+    'catalog.categories must not include "quran"'
+  );
+
   for (const cat of VALID_CATEGORIES) {
     assert.ok(categoriesSeen.has(cat), `Category "${cat}" has 0 stations in catalog`);
   }
@@ -111,8 +120,8 @@ async function run() {
     `Expected at least 15 countries, found ${countriesSeen.size}`
   );
   assert.ok(
-    yemenCount >= 8,
-    `Expected at least 8 Yemen stations, found ${yemenCount}`
+    yemenCount >= 6,
+    `Expected at least 6 Yemen stations, found ${yemenCount}`
   );
 
   // Filter / search behavior checks (English + Arabic normalization + flagship checks)
@@ -124,7 +133,7 @@ async function run() {
   assert.ok(khaleej.length > 0, 'Expected Sout Al Khaleej to be present in catalog');
 
   const yemenSearch = filterStations(catalog.stations, { countryCode: 'YE' });
-  assert.ok(yemenSearch.length >= 8, 'Expected at least 8 Yemen stations via countryCode filter');
+  assert.ok(yemenSearch.length >= 6, 'Expected at least 6 Yemen stations via countryCode filter');
 
   const arabicQuery = filterStations(catalog.stations, { query: 'فيروز' });
   assert.ok(arabicQuery.length > 0, 'Expected Arabic search "فيروز" to match at least 1 station');

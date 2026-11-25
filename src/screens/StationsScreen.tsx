@@ -101,7 +101,7 @@ export function StationsScreen() {
         <TextInput
           value={query}
           onChangeText={setQuery}
-          placeholder="Search Arabic stations, Fairuz, Quran, Egypt..."
+          placeholder="Search Arabic stations, Fairuz, news, Egypt..."
           placeholderTextColor={COLORS.textMuted}
           style={styles.searchInput}
           returnKeyType="search"
