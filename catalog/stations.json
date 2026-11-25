@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-24T17:27:19.435Z",
-  "stationCount": 230,
+  "updatedAt": "2026-11-25T04:02:59.134Z",
+  "stationCount": 194,
   "categories": [
     {
       "id": "tarab",
@@ -12,11 +12,6 @@
       "id": "music",
       "label": "Arabic Music",
       "labelAr": "موسيقى عربية"
-    },
-    {
-      "id": "quran",
-      "label": "Holy Quran",
-      "labelAr": "القرآن الكريم"
     },
     {
       "id": "news",
@@ -160,48 +155,6 @@
       ],
       "latencyMs": 938,
       "featured": true
-    },
-    {
-      "id": "curated-ye-noor-al-eman",
-      "name": "Noor Al-Eman نور الإيمان",
-      "countryCode": "YE",
-      "country": "Yemen",
-      "countryAr": "اليمن",
-      "flag": "🇾🇪",
-      "category": "quran",
-      "streamUrl": "https://edge.mixlr.com/channel/boaht",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran",
-        "yemen"
-      ],
-      "latencyMs": 954,
-      "featured": false
-    },
-    {
-      "id": "curated-ye-quran-sanaa",
-      "name": "إذاعة القرآن الكريم (صنعاء)",
-      "countryCode": "YE",
-      "country": "Yemen",
-      "countryAr": "اليمن",
-      "flag": "🇾🇪",
-      "category": "quran",
-      "streamUrl": "https://halo.streamerr.co/listen/quran_kareem/radio.mp3",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran",
-        "yemen"
-      ],
-      "latencyMs": 1016,
-      "featured": false
     },
     {
       "id": "curated-ye-sawt-almukawama",
@@ -534,44 +487,6 @@
       ],
       "latencyMs": 4228,
       "featured": true
-    },
-    {
-      "id": "62fbaf9d-c5ef-4b18-9e6a-cf9239ace46b",
-      "name": "راديو الشيخ محمد المقرمي إذاعة (هندسة القلوب)",
-      "countryCode": "YE",
-      "country": "Yemen",
-      "countryAr": "اليمن",
-      "flag": "🇾🇪",
-      "category": "variety",
-      "streamUrl": "https://s1.reliastream.com/proxy/almaqrami?mp=/stream",
-      "codec": "MP3",
-      "bitrate": 96,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "variety"
-      ],
-      "latencyMs": 599
-    },
-    {
-      "id": "af0c6768-565e-411e-81ea-1f6325e3728c",
-      "name": "إذاعة ابن القيم السلفية",
-      "countryCode": "YE",
-      "country": "Yemen",
-      "countryAr": "اليمن",
-      "flag": "🇾🇪",
-      "category": "quran",
-      "streamUrl": "https://c38.radioboss.fm:8323/stream",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran"
-      ],
-      "latencyMs": 712
     },
     {
       "id": "26c23dc4-1b31-473c-a9c4-746d9c7ae77b",
@@ -1188,482 +1103,6 @@
         "maroc"
       ],
       "latencyMs": 954
-    },
-    {
-      "id": "0155ec12-7308-468a-88dc-fcbd440e01da",
-      "name": "إذاعة مصطفى إسماعيل",
-      "countryCode": "EG",
-      "country": "Egypt",
-      "countryAr": "مصر",
-      "flag": "🇪🇬",
-      "category": "quran",
-      "streamUrl": "https://qurango.net/radio/mustafa_ismail",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran"
-      ],
-      "latencyMs": 943
-    },
-    {
-      "id": "5e1c31e7-7541-439a-9081-6f78508bb637",
-      "name": "إذاعة ياسر الدوسري",
-      "countryCode": "EG",
-      "country": "Egypt",
-      "countryAr": "مصر",
-      "flag": "🇪🇬",
-      "category": "quran",
-      "streamUrl": "https://qurango.net/radio/yasser_aldosari",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran"
-      ],
-      "latencyMs": 926
-    },
-    {
-      "id": "6aed851e-a68c-43c6-a0b1-f0bb7476e5d3",
-      "name": "Abdulrasheed Soufi",
-      "countryCode": "EG",
-      "country": "Egypt",
-      "countryAr": "مصر",
-      "flag": "🇪🇬",
-      "category": "quran",
-      "streamUrl": "https://qurango.net/radio/abdulrasheed_soufi_assosi.mp3",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran"
-      ],
-      "latencyMs": 1111
-    },
-    {
-      "id": "a9bee505-526e-4c7c-bf03-9797bbc8e28b",
-      "name": "تراتيل",
-      "countryCode": "TN",
-      "country": "Tunisia",
-      "countryAr": "تونس",
-      "flag": "🇹🇳",
-      "category": "quran",
-      "streamUrl": "https://qurango.net/radio/tarateel",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran"
-      ],
-      "latencyMs": 825
-    },
-    {
-      "id": "d3434153-afc3-4bdc-a98b-51ddca3990f1",
-      "name": "القارئ محمد أيوب",
-      "countryCode": "IQ",
-      "country": "Iraq",
-      "countryAr": "العراق",
-      "flag": "🇮🇶",
-      "category": "quran",
-      "streamUrl": "https://qurango.net/radio/mohammed_ayyub",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": "https://mp3quran.net/img/logo2.png",
-      "tags": [
-        "arabic",
-        "quran"
-      ],
-      "latencyMs": 1139
-    },
-    {
-      "id": "8a753c11-ee4a-42bf-8e4d-6d852cac9030",
-      "name": "القارئ علي الحذيفي رواية قالون",
-      "countryCode": "SA",
-      "country": "Saudi Arabia",
-      "countryAr": "السعودية",
-      "flag": "🇸🇦",
-      "category": "quran",
-      "streamUrl": "https://qurango.net/radio/ali_alhuthaifi_qalon",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran"
-      ],
-      "latencyMs": 832
-    },
-    {
-      "id": "448ba0a5-0c40-4f53-adc6-9d7f8b6e5f6a",
-      "name": "Darusalam Radio",
-      "countryCode": "IQ",
-      "country": "Iraq",
-      "countryAr": "العراق",
-      "flag": "🇮🇶",
-      "category": "quran",
-      "streamUrl": "https://streams.radio.co/s0975ec186/listen",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": "https://images.radio.co/station_logos/s0975ec186.20220716110749.jpg",
-      "tags": [
-        "arabic",
-        "quran",
-        "darusalam",
-        "islamic",
-        "sunni"
-      ],
-      "latencyMs": 1642
-    },
-    {
-      "id": "894f73d0-647d-461b-845c-95d8e14a1e32",
-      "name": "Alseraj Radio Islam",
-      "countryCode": "IQ",
-      "country": "Iraq",
-      "countryAr": "العراق",
-      "flag": "🇮🇶",
-      "category": "quran",
-      "streamUrl": "https://eu4.fastcast4u.com/proxy/aabdul00?mp=/1",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran",
-        "alseraj",
-        "iraq",
-        "islam",
-        "islamic"
-      ],
-      "latencyMs": 1070
-    },
-    {
-      "id": "0d468016-910f-497f-b75e-26aed21086e9",
-      "name": "Quran Radio راديو القرآن - Abdulbasit Abdulsamad - عبدالباسط عبدالصمد",
-      "countryCode": "KW",
-      "country": "Kuwait",
-      "countryAr": "الكويت",
-      "flag": "🇰🇼",
-      "category": "quran",
-      "streamUrl": "https://radio.mp3islam.com/listen/abdulbasit/radio.mp3",
-      "codec": "AAC",
-      "bitrate": 64,
-      "isHls": false,
-      "logoUrl": "https://mp3islam.com/favicon.ico",
-      "tags": [
-        "arabic",
-        "quran",
-        "islam",
-        "recitation",
-        "religion"
-      ],
-      "latencyMs": 861
-    },
-    {
-      "id": "a6c8c797-e8b5-4a82-b5eb-756062a17c90",
-      "name": "Zitouna Zitouna FM",
-      "countryCode": "TN",
-      "country": "Tunisia",
-      "countryAr": "تونس",
-      "flag": "🇹🇳",
-      "category": "quran",
-      "streamUrl": "https://radio.radiotunisienne.tn/radiozaitouna",
-      "codec": "MP3",
-      "bitrate": 192,
-      "isHls": false,
-      "logoUrl": "https://www.tunisie-radio.com/sites/default/files/styles/medium_2/public/radio/zitouna-fm.jpg",
-      "tags": [
-        "arabic",
-        "quran",
-        "coran",
-        "religion",
-        "sonnah"
-      ],
-      "latencyMs": 1134
-    },
-    {
-      "id": "77c8094d-6822-4221-be7b-1d54ab477d78",
-      "name": "Quran Radio راديو القرآن - Abdulrahman Alsudais - عبدالرحمن السديس",
-      "countryCode": "KW",
-      "country": "Kuwait",
-      "countryAr": "الكويت",
-      "flag": "🇰🇼",
-      "category": "quran",
-      "streamUrl": "https://radio.mp3islam.com/listen/sudais/radio.mp3",
-      "codec": "AAC+",
-      "bitrate": 64,
-      "isHls": false,
-      "logoUrl": "https://mp3islam.com/favicon.ico",
-      "tags": [
-        "arabic",
-        "quran",
-        "abdulrahman",
-        "alsudais",
-        "egypt",
-        "kuwait"
-      ],
-      "latencyMs": 2146
-    },
-    {
-      "id": "10f95a01-1066-471b-89c5-f9092e73a373",
-      "name": "Quran Radio راديو القرآن - Saud Al-Shuraim سعود الشريم",
-      "countryCode": "KW",
-      "country": "Kuwait",
-      "countryAr": "الكويت",
-      "flag": "🇰🇼",
-      "category": "quran",
-      "streamUrl": "https://radio.mp3islam.com/listen/alshuraim/radio.mp3",
-      "codec": "AAC+",
-      "bitrate": 64,
-      "isHls": false,
-      "logoUrl": "https://mp3islam.com/favicon.ico",
-      "tags": [
-        "arabic",
-        "quran",
-        "kuwait",
-        "kuwait الكويت",
-        "quran radio",
-        "saud al-shuraim"
-      ],
-      "latencyMs": 1850
-    },
-    {
-      "id": "cfc734ad-6e1b-4e04-9a4b-6932f2f78ca7",
-      "name": "في ضلال السيرة النبوية",
-      "countryCode": "TN",
-      "country": "Tunisia",
-      "countryAr": "تونس",
-      "flag": "🇹🇳",
-      "category": "quran",
-      "streamUrl": "https://qurango.net/radio/fi_zilal_alsiyra",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran"
-      ],
-      "latencyMs": 1022
-    },
-    {
-      "id": "0a97035a-bd76-46da-acbb-894f0876da1f",
-      "name": "Quran Radio راديو القرآن - Muhammad Al-Minshawi محمد صديق المنشاوي",
-      "countryCode": "KW",
-      "country": "Kuwait",
-      "countryAr": "الكويت",
-      "flag": "🇰🇼",
-      "category": "quran",
-      "streamUrl": "https://radio.mp3islam.com/listen/minshawi/radio.mp3",
-      "codec": "AAC",
-      "bitrate": 64,
-      "isHls": false,
-      "logoUrl": "https://radio.mp3islam.com/static/uploads/minshawi/album_art.1743893697.jpg",
-      "tags": [
-        "arabic",
-        "quran",
-        "islam",
-        "islamic",
-        "kuran",
-        "kuwait الكويت"
-      ],
-      "latencyMs": 776
-    },
-    {
-      "id": "b90c0167-61a7-4719-ba42-4993eaff4858",
-      "name": "إذاعة نور الإيمان المسموعة 105.7 FM",
-      "countryCode": "LY",
-      "country": "Libya",
-      "countryAr": "ليبيا",
-      "flag": "🇱🇾",
-      "category": "quran",
-      "streamUrl": "https://stream.zeno.fm/r6eprdta6nhvv",
-      "codec": "AAC",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran"
-      ],
-      "latencyMs": 790
-    },
-    {
-      "id": "2cc238bc-2466-4e27-a5ad-af7e02991220",
-      "name": "Quran Program Oman إذاعة-القرآن-الكريم",
-      "countryCode": "OM",
-      "country": "Oman",
-      "countryAr": "عُمان",
-      "flag": "🇴🇲",
-      "category": "quran",
-      "streamUrl": "https://partwota.cdn.mgmlcdn.com/quranrdoorg/quranrdo.stream_aac/chunklist.m3u8",
-      "codec": "HLS",
-      "bitrate": 128,
-      "isHls": true,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran"
-      ],
-      "latencyMs": 865
-    },
-    {
-      "id": "f25fc24b-c5b9-4800-8d51-3e26bb89a99d",
-      "name": "Quran Radio راديو القرآن - Yasser AlDosari - ياسر الدوسري",
-      "countryCode": "KW",
-      "country": "Kuwait",
-      "countryAr": "الكويت",
-      "flag": "🇰🇼",
-      "category": "quran",
-      "streamUrl": "https://radio.mp3islam.com/listen/yaser/radio.mp3",
-      "codec": "AAC+",
-      "bitrate": 64,
-      "isHls": false,
-      "logoUrl": "https://mp3islam.com/favicon.ico",
-      "tags": [
-        "arabic",
-        "quran",
-        "kuwait الكويت",
-        "quran radio",
-        "yasser aldosari",
-        "السعودية"
-      ],
-      "latencyMs": 1350
-    },
-    {
-      "id": "a66ea931-c72f-4e37-b880-96a98c1100cd",
-      "name": "أذكار الصباح",
-      "countryCode": "TN",
-      "country": "Tunisia",
-      "countryAr": "تونس",
-      "flag": "🇹🇳",
-      "category": "quran",
-      "streamUrl": "https://qurango.net/radio/athkar_sabah",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran"
-      ],
-      "latencyMs": 1024
-    },
-    {
-      "id": "a182e5ba-a840-40bf-9e51-01bef3ad9e24",
-      "name": "Aziz Mustaphi",
-      "countryCode": "MA",
-      "country": "Morocco",
-      "countryAr": "المغرب",
-      "flag": "🇲🇦",
-      "category": "quran",
-      "streamUrl": "https://d3ctxlq1ktw2nl.cloudfront.net/production/2022-0-3/240607172-44100-2-afb2485b0c30e.mp3",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": "https://infoplus60.blogspot.com/favicon.ico",
-      "tags": [
-        "arabic",
-        "quran",
-        "coran",
-        "mp3",
-        "news"
-      ],
-      "latencyMs": 708
-    },
-    {
-      "id": "3f402c57-dcd4-4c70-9431-d0b3da3d4a14",
-      "name": "قراءات متنوعة",
-      "countryCode": "TN",
-      "country": "Tunisia",
-      "countryAr": "تونس",
-      "flag": "🇹🇳",
-      "category": "quran",
-      "streamUrl": "https://qurango.net/radio/mix",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran"
-      ],
-      "latencyMs": 1237
-    },
-    {
-      "id": "f11a1158-1ee0-4772-bcb0-110522be1e18",
-      "name": "Hayat FM",
-      "countryCode": "JO",
-      "country": "Jordan",
-      "countryAr": "الأردن",
-      "flag": "🇯🇴",
-      "category": "quran",
-      "streamUrl": "https://dc1.serverse.com/proxy/kjxwtpdt/stream",
-      "codec": "AAC+",
-      "bitrate": 64,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran",
-        "civil",
-        "hashemite",
-        "jordan",
-        "kingdom"
-      ],
-      "latencyMs": 1360
-    },
-    {
-      "id": "7cca8bd6-a173-4fca-9a74-ca1e15a631e5",
-      "name": "Quran Radio From Sharjah",
-      "countryCode": "AE",
-      "country": "United Arab Emirates",
-      "countryAr": "الإمارات",
-      "flag": "🇦🇪",
-      "category": "quran",
-      "streamUrl": "https://l3.itworkscdn.net/smcquranlive/quranradiolive/icecast.audio",
-      "codec": "AAC+",
-      "bitrate": 56,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran",
-        "islam"
-      ],
-      "latencyMs": 159
-    },
-    {
-      "id": "0ec5f129-e885-49e0-85f2-b7bb55b135e2",
-      "name": "Radio Indah Siar Cirebon",
-      "countryCode": "INTL",
-      "country": "Pan-Arab / International",
-      "countryAr": "عربي دولي",
-      "flag": "🌍",
-      "category": "quran",
-      "streamUrl": "https://az2.radioislam.my.id:8150/;stream.nsv",
-      "codec": "AAC+",
-      "bitrate": 32,
-      "isHls": false,
-      "logoUrl": "https://i0.wp.com/www.salafycirebon.com/wp-content/uploads/2017/10/cropped-logo-sccom8.png?fit=180%2c180&#038;ssl=1",
-      "tags": [
-        "arabic",
-        "quran",
-        "dakwah",
-        "islam"
-      ],
-      "latencyMs": 1189
     },
     {
       "id": "9121aa97-ef1e-11e8-a471-52543be04c81",
@@ -2412,25 +1851,6 @@
       "latencyMs": 3211
     },
     {
-      "id": "ffcdc7e1-089e-4dfb-b11f-c2dcb26ef923",
-      "name": "Love-Islam-Radio",
-      "countryCode": "INTL",
-      "country": "Pan-Arab / International",
-      "countryAr": "عربي دولي",
-      "flag": "🌍",
-      "category": "variety",
-      "streamUrl": "https://stream.zeno.fm/f9h69cgbu68uv",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "variety"
-      ],
-      "latencyMs": 212
-    },
-    {
       "id": "9637cdcf-0601-11e8-ae97-52543be04c81",
       "name": "Beirut Nights",
       "countryCode": "LB",
@@ -2781,46 +2201,6 @@
       "latencyMs": 3568
     },
     {
-      "id": "2c82c815-59af-4eb3-80b6-43e4ad80bea2",
-      "name": "Almunir Radio – Tripoli",
-      "countryCode": "LY",
-      "country": "Libya",
-      "countryAr": "ليبيا",
-      "flag": "🇱🇾",
-      "category": "quran",
-      "streamUrl": "https://live.munir.ly/proxy/almunirtip/stream",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": "https://munir.ly/wp-content/uploads/2023/08/munir-favicon-svg.svg",
-      "tags": [
-        "arabic",
-        "quran",
-        "religious"
-      ],
-      "latencyMs": 4077
-    },
-    {
-      "id": "2b1ad85e-2a5b-4c83-9a98-62e84d188cd8",
-      "name": "Almunir Radio – Benghazi",
-      "countryCode": "LY",
-      "country": "Libya",
-      "countryAr": "ليبيا",
-      "flag": "🇱🇾",
-      "category": "quran",
-      "streamUrl": "https://live.munir.ly/proxy/almunir/stream",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": "https://munir.ly/wp-content/uploads/2023/08/munir-favicon-svg.svg",
-      "tags": [
-        "arabic",
-        "quran",
-        "religious"
-      ],
-      "latencyMs": 3090
-    },
-    {
       "id": "38bb16a5-7996-442d-a03f-3cccf0aa8bb7",
       "name": "Kuwait General Radio",
       "countryCode": "KW",
@@ -2973,47 +2353,6 @@
         "variety"
       ],
       "latencyMs": 858
-    },
-    {
-      "id": "3e1a2014-d426-4f74-b237-8c109054911e",
-      "name": "Bahrain 106.1 FM",
-      "countryCode": "BH",
-      "country": "Bahrain",
-      "countryAr": "البحرين",
-      "flag": "🇧🇭",
-      "category": "quran",
-      "streamUrl": "https://5c7b683162943.streamlock.net/live/ngrp:radio-106-1_all/playlist.m3u8",
-      "codec": "HLS",
-      "bitrate": 1066,
-      "isHls": true,
-      "logoUrl": "https://www.mia.gov.bh/wp-content/uploads/2023/02/cropped-Royal-Emblem-192x192.png",
-      "tags": [
-        "arabic",
-        "quran",
-        "bahrain",
-        "islam"
-      ],
-      "latencyMs": 2716
-    },
-    {
-      "id": "06e1ce15-a839-4bd6-9d77-6c4c32eb75cc",
-      "name": "Quran Radio (JO)",
-      "countryCode": "JO",
-      "country": "Jordan",
-      "countryAr": "الأردن",
-      "flag": "🇯🇴",
-      "category": "quran",
-      "streamUrl": "https://jrtv-live.ercdn.net/jrradio/quranradio.m3u8",
-      "codec": "HLS",
-      "bitrate": 128,
-      "isHls": true,
-      "logoUrl": "https://static.jrtv.gov.jo/resize-width/380/content/7/Mv/3/Thumbnail.png",
-      "tags": [
-        "arabic",
-        "quran",
-        "religious"
-      ],
-      "latencyMs": 2456
     },
     {
       "id": "bd561679-5317-4a66-8393-c6f06970792d",
@@ -3486,28 +2825,6 @@
         "variety"
       ],
       "latencyMs": 2250
-    },
-    {
-      "id": "f07420b2-244c-45fd-aa5a-321f4dbf8df6",
-      "name": "Coran القرآن الكريم",
-      "countryCode": "DZ",
-      "country": "Algeria",
-      "countryAr": "الجزائر",
-      "flag": "🇩🇿",
-      "category": "quran",
-      "streamUrl": "https://webradio1.tda.dz:8001/Coran_64K.mp3",
-      "codec": "MP3",
-      "bitrate": 64,
-      "isHls": false,
-      "logoUrl": "https://my.radioalgerie.dz/sites/default/files/styles/d02/public/2021-09/coran.png",
-      "tags": [
-        "arabic",
-        "quran",
-        "coran",
-        "news",
-        "religion"
-      ],
-      "latencyMs": 190
     },
     {
       "id": "76e40aad-e677-4eb5-a2a5-8fac3e51e1ae",
@@ -4019,29 +3336,6 @@
       "latencyMs": 3060
     },
     {
-      "id": "2cb54ac0-37d7-4742-8259-18e07a6cb2c7",
-      "name": "محمود خليل الحصري - حفص عن عاصم مرتل - mp3quran",
-      "countryCode": "EG",
-      "country": "Egypt",
-      "countryAr": "مصر",
-      "flag": "🇪🇬",
-      "category": "quran",
-      "streamUrl": "https://qurango.net/radio/mahmoud_khalil_alhussary",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": null,
-      "tags": [
-        "arabic",
-        "quran",
-        "hafs",
-        "hussary",
-        "islam",
-        "mp3quran"
-      ],
-      "latencyMs": 2676
-    },
-    {
       "id": "8efd6d38-d14b-4a09-853c-10df4d012de7",
       "name": "Ghardaïa غرداية",
       "countryCode": "DZ",
@@ -4502,26 +3796,6 @@
       "latencyMs": 2953
     },
     {
-      "id": "46d54920-eece-4b59-b6f9-9ef271c41371",
-      "name": "Ayat Al Quran Radio",
-      "countryCode": "LB",
-      "country": "Lebanon",
-      "countryAr": "لبنان",
-      "flag": "🇱🇧",
-      "category": "quran",
-      "streamUrl": "https://stream.zeno.fm/1fatuk10fkhvv",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": "https://cdn.onlineradiobox.com/img/l/7/113617.v7.png",
-      "tags": [
-        "arabic",
-        "quran",
-        "islamic"
-      ],
-      "latencyMs": 1908
-    },
-    {
       "id": "c6d71255-a5e0-4631-a605-ff9eed2d092c",
       "name": "Sabah Radio",
       "countryCode": "LB",
@@ -4679,25 +3953,6 @@
         "variety"
       ],
       "latencyMs": 1624
-    },
-    {
-      "id": "82a5c307-2dd2-4166-a455-11866a40be3b",
-      "name": "عبد الله سراج الدين",
-      "countryCode": "SY",
-      "country": "Syria",
-      "countryAr": "سوريا",
-      "flag": "🇸🇾",
-      "category": "variety",
-      "streamUrl": "https://stream.zeno.fm/sq7ntk6zlaquv",
-      "codec": "MP3",
-      "bitrate": 128,
-      "isHls": false,
-      "logoUrl": "https://stream-tools.zenomedia.com/content/users/09706dc2-e6a6-47f9-ba2a-48f3f5c08baf/image/?u=1793260023135",
-      "tags": [
-        "arabic",
-        "variety"
-      ],
-      "latencyMs": 1102
     },
     {
       "id": "c19661d7-33a1-450e-ba92-95fa10485446",

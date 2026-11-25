@@ -24,7 +24,6 @@ const MIN_STREAM_BYTES = 1024;
 const TARGET_MIN_STATIONS = 180;
 const TARGET_MAX_STATIONS = 240;
 const MAX_PER_COUNTRY = 25;
-const MAX_QURAN_PER_COUNTRY = 5;
 
 const ARAB_COUNTRIES = [
   'YE', 'SA', 'QA', 'AE', 'KW', 'OM', 'BH',
@@ -68,7 +67,6 @@ const COUNTRY_META = {
 const CATEGORIES = [
   { id: 'tarab', label: 'Tarab & Classics', labelAr: 'طرب وكلاسيكيات' },
   { id: 'music', label: 'Arabic Music', labelAr: 'موسيقى عربية' },
-  { id: 'quran', label: 'Holy Quran', labelAr: 'القرآن الكريم' },
   { id: 'news', label: 'News & Talk', labelAr: 'أخبار وحوارات' },
   { id: 'variety', label: 'Variety & FM', labelAr: 'منوعات' },
 ];
@@ -83,7 +81,7 @@ const NON_ARABIC_LANGS = new Set([
 ]);
 
 const ARABIC_RELEVANCE_KEYWORDS = [
-  'arab', 'arabic', 'tarab', 'quran', 'qoran', 'coran', 'koran', 'fairouz',
+  'arab', 'arabic', 'tarab', 'fairouz',
   'fairuz', 'fayrouz', 'umm kulthum', 'om kalthoum', 'oum kalthoum', 'om kalthom',
   'um kulthum', 'abdel halim', 'warda', 'khaleeji', 'khaleej', 'chaabi', 'rai',
   'nogoum', 'rotana', 'mbc', 'anghami', 'doualiya', 'sky news arabia', 'al jazeera',
@@ -94,7 +92,7 @@ const ARABIC_RELEVANCE_KEYWORDS = [
   'damascus', 'palestine', 'quds', 'manama', 'muscat', 'doha', 'qatar radio',
   'kuwait', 'sanaa', 'sana’a', 'aden', 'yemen', 'sam fm', 'lana fm', 'afaq',
   'khartoum', 'tripoli', 'masr', 'misr', 'asharq', 'alarabiya', 'al arabiya',
-  'hadith', 'sunnah', 'islamic', 'noor al-eman', 'emarat', 'abu dhabi',
+  'emarat', 'abu dhabi',
   'panorama fm', 'alifalif', 'aghani',
 ];
 
@@ -494,16 +492,48 @@ async function runWithConcurrency(items, concurrency, fn) {
   return results;
 }
 
+// iTarab Radio is a music & news app. Quran / religious stations belong in the
+// separate Islamic Radio app, so they are detected here and dropped from the catalog.
+const RELIGIOUS_RE =
+  /(qurango\.net|mp3quran\.net|assabile|quran|qoran|coran|koran|islamic|love-islam|sunnah|athkar|azkar|ruqyah|hadith|tafseer|tafsir|sheikh|shaykh|قرآن|القران|اذاعة القران|إذاعة القرآن|تراتيل|القارئ|السيرة|الفتاوى|فتاوى|الفقه|الصحابة|تلاوة|مصحف|تفسير|إسلام|رقية|أذكار|اذكار|نور الإيمان|noor al-eman|السلفية|ابن القيم|الشيخ)/;
+
+// Religious stations whose names don't match RELIGIOUS_RE.
+const BLOCKED_STATION_IDS = new Set([
+  '82a5c307-2dd2-4166-a455-11866a40be3b', // عبد الله سراج الدين (Islamic scholar lectures)
+  'f11a1158-1ee0-4772-bcb0-110522be1e18', // Hayat FM (JO), Islamic station
+  '3e1a2014-d426-4f74-b237-8c109054911e', // Bahrain 106.1 FM, Quran station
+  'a6c8c797-e8b5-4a82-b5eb-756062a17c90', // Zitouna FM, Quran station
+  '448ba0a5-0c40-4f53-adc6-9d7f8b6e5f6a', // Darusalam Radio
+  '2c82c815-59af-4eb3-80b6-43e4ad80bea2', // Almunir Radio Tripoli
+  '2b1ad85e-2a5b-4c83-9a98-62e84d188cd8', // Almunir Radio Benghazi
+  'a182e5ba-a840-40bf-9e51-01bef3ad9e24', // Aziz Mustaphi (reciter)
+  '6aed851e-a68c-43c6-a0b1-f0bb7476e5d3', // Abdulrasheed Soufi (reciter)
+  '0155ec12-7308-468a-88dc-fcbd440e01da', // Mustafa Ismail (reciter)
+  '5e1c31e7-7541-439a-9081-6f78508bb637', // Yasser Al-Dosari (reciter)
+  'd3434153-afc3-4bdc-a98b-51ddca3990f1', // Muhammad Ayyub (reciter)
+  '3f402c57-dcd4-4c70-9431-d0b3da3d4a14', // قراءات متنوعة (recitations)
+  '0ec5f129-e885-49e0-85f2-b7bb55b135e2', // Radio Indah Siar Cirebon (Indonesian Islamic)
+]);
+
+function isReligiousStation(st) {
+  if (!st) return false;
+  if (st.category === 'quran' || st.category === 'religious') return true;
+  if (BLOCKED_STATION_IDS.has(st.id)) return true;
+  const tags = Array.isArray(st.tags) ? st.tags.join(' ') : String(st.tags || '');
+  const religiousTags = /\b(quran|qoran|coran|koran|islamic|sunnah|hadith|ruqyah)\b/;
+  return RELIGIOUS_RE.test(`${st.name || ''} ${st.streamUrl || ''}`.toLowerCase()) || religiousTags.test(tags.toLowerCase());
+}
+
 function categorizeStation(name, tagsStr, streamUrl = '') {
   const hay = `${name} ${tagsStr} ${streamUrl}`.toLowerCase();
 
-  // 1. Holy Quran & Islamic Radio
+  // 1. Quran & religious radio: flagged so callers drop it
   if (
     /(qurango\.net|mp3quran\.net|assabile|quran|qoran|coran|koran|islamic|sunnah|athkar|azkar|ruqyah|hadith|tafseer|tafsir|قرآن|القرآن|اذاعة القران|إذاعة القرآن|تراتيل|القارئ|السيرة|الفتاوى|فتاوى|الفقه|الصحابة|رمضان|تلاوة|مصحف|تفسير|إسلام|سنة|رقية|أذكار|نور الإيمان|noor al-eman|السلفية|ابن القيم)/.test(
       hay
     )
   ) {
-    return 'quran';
+    return 'religious';
   }
 
   // 2. News & Talk
@@ -574,7 +604,7 @@ async function loadCuratedEntries() {
   try {
     const raw = await fs.readFile(CURATED_JSON_PATH, 'utf8');
     const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : [];
+    return Array.isArray(parsed) ? parsed.filter((e) => !isReligiousStation(e)) : [];
   } catch {
     return [];
   }
@@ -639,22 +669,15 @@ function selectBalancedCatalog(curatedStations, discoveredStations) {
   const selected = [];
   const selectedIds = new Set();
   const countryCounts = new Map();
-  const countryQuranCounts = new Map();
 
   function addStation(st, forceInclude = false) {
     if (selectedIds.has(st.id)) return false;
+    if (isReligiousStation(st)) return false;
     const ccCount = countryCounts.get(st.countryCode) || 0;
-    const qCount = countryQuranCounts.get(st.countryCode) || 0;
-    if (!forceInclude) {
-      if (ccCount >= MAX_PER_COUNTRY) return false;
-      if (st.category === 'quran' && qCount >= MAX_QURAN_PER_COUNTRY) return false;
-    }
+    if (!forceInclude && ccCount >= MAX_PER_COUNTRY) return false;
     selected.push(st);
     selectedIds.add(st.id);
     countryCounts.set(st.countryCode, ccCount + 1);
-    if (st.category === 'quran') {
-      countryQuranCounts.set(st.countryCode, qCount + 1);
-    }
     return true;
   }
 
@@ -678,7 +701,7 @@ function selectBalancedCatalog(curatedStations, discoveredStations) {
   // Pass 2: Guarantee strong coverage across all 5 categories
   for (const cat of CATEGORIES) {
     let taken = selected.filter((s) => s.category === cat.id).length;
-    const catTarget = cat.id === 'quran' ? 28 : 32;
+    const catTarget = 32;
     for (const st of scored) {
       if (taken >= catTarget) break;
       if (st.category === cat.id && addStation(st)) {
@@ -704,13 +727,11 @@ function selectBalancedCatalog(curatedStations, discoveredStations) {
     addStation(st);
   }
 
-  // Pass 5: If still under TARGET_MIN_STATIONS, relax per-country cap (keep Quran <= 8 per country)
+  // Pass 5: If still under TARGET_MIN_STATIONS, relax per-country cap
   if (selected.length < TARGET_MIN_STATIONS) {
     for (const st of scored) {
       if (selected.length >= TARGET_MAX_STATIONS) break;
       if (selectedIds.has(st.id)) continue;
-      const qCount = countryQuranCounts.get(st.countryCode) || 0;
-      if (st.category === 'quran' && qCount >= 8) continue;
       addStation(st, true);
     }
   }
@@ -786,7 +807,7 @@ async function verifyExistingCatalog() {
 
   const raw = await fs.readFile(STATIONS_JSON_PATH, 'utf8');
   const existing = JSON.parse(raw);
-  const existingStations = existing.stations || [];
+  const existingStations = (existing.stations || []).filter((s) => !isReligiousStation(s));
 
   const curatedIds = new Set(curatedLive.map((s) => s.id));
   const curatedUrls = new Set(curatedLive.map((s) => normalizeUrl(s.streamUrl)).filter(Boolean));
@@ -873,7 +894,6 @@ async function curateCatalog() {
     { path: '/json/stations/search?language=arabic&limit=400&hidebroken=true&order=clickcount&reverse=true', strict: false },
     { path: '/json/stations/search?tag=arabic&limit=200&hidebroken=true&order=clickcount&reverse=true', strict: false },
     { path: '/json/stations/search?tag=tarab&limit=100&hidebroken=true&order=clickcount&reverse=true', strict: false },
-    { path: '/json/stations/search?tag=quran&limit=100&hidebroken=true&order=clickcount&reverse=true', strict: false },
     ...ARAB_COUNTRIES.map((cc) => ({
       path: `/json/stations/search?countrycode=${cc}&limit=${cc === 'YE' ? 100 : 60}&hidebroken=true&order=clickcount&reverse=true`,
       strict: true,
@@ -975,6 +995,9 @@ async function curateCatalog() {
     passedCount++;
 
     const category = categorizeStation(cleanName, raw.tags || '', winner.streamUrl);
+    if (category === 'religious' || isReligiousStation({ id: raw.stationuuid, name: cleanName, tags: raw.tags || '', streamUrl: winner.streamUrl })) {
+      return null;
+    }
     const baseId = raw.stationuuid || `${country.code.toLowerCase()}-${slugify(cleanName)}`;
     let id = baseId;
     let suffix = 2;

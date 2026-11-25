@@ -60,26 +60,6 @@
     "featured": true
   },
   {
-    "id": "curated-ye-noor-al-eman",
-    "name": "Noor Al-Eman نور الإيمان",
-    "countryCode": "YE",
-    "category": "quran",
-    "streamUrl": "https://edge.mixlr.com/channel/boaht",
-    "logoUrl": null,
-    "tags": ["arabic", "yemen", "quran"],
-    "featured": false
-  },
-  {
-    "id": "curated-ye-quran-sanaa",
-    "name": "إذاعة القرآن الكريم (صنعاء)",
-    "countryCode": "YE",
-    "category": "quran",
-    "streamUrl": "https://halo.streamerr.co/listen/quran_kareem/radio.mp3",
-    "logoUrl": null,
-    "tags": ["arabic", "yemen", "quran"],
-    "featured": false
-  },
-  {
     "id": "curated-ye-sawt-almukawama",
     "name": "صوت المقاومة",
     "countryCode": "YE",

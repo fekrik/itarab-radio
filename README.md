@@ -4,7 +4,7 @@ Cross-platform revival of **iTarab Radio** ([App Store `id625963573`](https://ap
 
 ## Highlights
 
-- **Verified Arabic Station Catalog (`catalog/stations.json`)**: 233 live-probed HTTPS Arabic radio stations across 19 countries/regions and 5 categories (**Tarab & Classics**, **Arabic Music**, **Holy Quran**, **News & Talk**, and **Variety & FM**), including **Sout Al Khaleej**, **10 Yemeni stations**, **MBC FM**, **Panorama FM**, **Al Khaleejiya**, **Qatar Radio**, **BBC Arabic**, **Monte Carlo Doualiya**, and **Al Jazeera**.
+- **Verified Arabic Station Catalog (`catalog/stations.json`)**: 194 live-probed HTTPS Arabic music and news stations across 4 categories (**Tarab & Classics**, **Arabic Music**, **News & Talk**, and **Variety & FM**), including **Sout Al Khaleej**, **Yemeni stations**, **MBC FM**, **Panorama FM**, **Al Khaleejiya**, **Qatar Radio**, **BBC Arabic**, **Monte Carlo Doualiya**, and **Al Jazeera**.
 - **Hand-Curated Priority List (`catalog/curated-stations.json`)**: Add, edit, or reorder flagship stations and backup `fallbackUrls` in one JSON file without touching app code.
 - **Daily Over-the-Air Sync + Pull-to-Refresh**: Automatically checks for catalog updates every 24 hours (using `ETag` / `If-None-Match` conditional requests), supports pull-to-refresh in the Stations list, and keeps the bundled catalog as an instant offline fallback.
 - **Automatic Fallback Failover**: If a station's primary stream fails or times out, the player automatically tries its `fallbackUrls` before showing an error.
