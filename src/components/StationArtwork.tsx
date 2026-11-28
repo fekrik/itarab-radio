@@ -16,7 +16,9 @@ function getMonogramLabel(name: string): string {
   const cleaned = name.trim();
   if (!cleaned) return '♪';
 
-  if (/[\u0600-\u06FF]/.test(cleaned)) {
+  // Mixed names like "Fairuz فيروز" use Latin initials; only Arabic-only
+  // names fall back to the first Arabic word.
+  if (!/[a-zA-Z]/.test(cleaned) && /[\u0600-\u06FF]/.test(cleaned)) {
     const firstWord = cleaned.split(/\s+/)[0] || '';
     if (firstWord.length > 0 && firstWord.length <= 6) {
       return firstWord;
