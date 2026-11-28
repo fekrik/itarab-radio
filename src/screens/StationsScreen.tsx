@@ -170,12 +170,12 @@ export function StationsScreen() {
         </View>
       )}
 
-      {/* Featured Tarab & Classics */}
+      {/* Featured stations */}
       {isUnfiltered && featuredStations.length > 0 && (
         <View style={styles.sectionBlock}>
           <View style={styles.sectionHeaderRow}>
-            <Text style={styles.sectionTitle}>Featured Tarab & Classics</Text>
-            <Text style={styles.sectionTitleAr}>طرب وكلاسيكيات</Text>
+            <Text style={styles.sectionTitle}>Featured Stations</Text>
+            <Text style={styles.sectionTitleAr}>محطات مختارة</Text>
           </View>
           <ScrollView
             horizontal
