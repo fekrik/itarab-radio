@@ -31,7 +31,9 @@ export const BARQ_APPS: BarqApp[] = [
     name: 'Pull Back',
     tagline: 'A daily photo puzzle. Guess the close-up as it zooms out.',
     icon: require('../../assets/barqlab/pull-back.png'),
-    appStoreId: '6839445589',
+    // Not released on the App Store yet (Nov 2026), so iPhone users go through
+    // barqlab.app/get/pull-back, which can switch to the App Store on launch.
+    appStoreId: null,
     playPackage: 'app.barqlab.pullback',
   },
   {
@@ -54,15 +56,15 @@ export const BARQ_APPS: BarqApp[] = [
     slug: 'midnight-assembly',
     name: 'Midnight Assembly',
     tagline: 'A stealth toy escape game. Stay hidden, find the way out.',
-    icon: null,
-    appStoreId: null,
+    icon: require('../../assets/barqlab/midnight-assembly.png'),
+    appStoreId: '6837762820',
     playPackage: 'com.fekri.midnightassembly',
   },
   {
     slug: 'itarab-radio',
     name: 'iTarab Radio',
     tagline: 'Live Arabic music and news radio.',
-    icon: require('../../assets/barqlab/itarab-radio.png'),
+    icon: null, // own entry, never shown
     appStoreId: '625963573',
     playPackage: 'com.almojor.itarab',
   },
