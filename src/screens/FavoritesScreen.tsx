@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { FollowUsCard } from '../components/FollowUsCard';
 import { StationRow } from '../components/StationRow';
 import { useRadioPlayer } from '../context/RadioPlayerContext';
 import { COLORS } from '../theme/colors';
@@ -64,6 +65,7 @@ export function FavoritesScreen() {
             onToggleFavorite={() => toggleFavorite(item.id)}
           />
         )}
+        ListFooterComponent={<FollowUsCard />}
         ListEmptyComponent={
           <View style={styles.emptyBox}>
             <View style={styles.emptyIconCircle}>
