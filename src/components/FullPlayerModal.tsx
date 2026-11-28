@@ -3,6 +3,7 @@ import {
   ActivityIndicator,
   Animated,
   Modal,
+  Platform,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -11,6 +12,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { shareStation } from '../barqlab/share';
 import { useRadioPlayer } from '../context/RadioPlayerContext';
 import { CATEGORY_ACCENTS, COLORS } from '../theme/colors';
 import { SleepTimerModal } from './SleepTimerModal';
@@ -245,14 +247,14 @@ export function FullPlayerModal() {
             </TouchableOpacity>
 
             <TouchableOpacity
-              onPress={() => setSleepSheetVisible(true)}
+              onPress={() => shareStation(currentStation)}
               style={styles.sideActionBtn}
-              accessibilityLabel="Open sleep timer"
+              accessibilityLabel={`Share ${currentStation.name}`}
             >
               <Ionicons
-                name="timer-outline"
+                name={Platform.OS === 'ios' ? 'share-outline' : 'share-social-outline'}
                 size={24}
-                color={sleepTimerMinutes ? COLORS.gold : COLORS.textSecondary}
+                color={COLORS.textSecondary}
               />
             </TouchableOpacity>
           </View>
