@@ -8,6 +8,7 @@ import React, {
   useState,
 } from 'react';
 import { AppState } from 'react-native';
+import { recordAppOpen, recordGoodMoment } from '../services/reviewPrompt';
 import * as Haptics from 'expo-haptics';
 import {
   getBundledCatalog,
@@ -22,6 +23,8 @@ import {
   saveFavoriteIds,
 } from '../services/storageService';
 import type { CategoryMeta, PlaybackState, Station } from '../types/radio';
+
+const LONG_LISTEN_MS = 5 * 60 * 1000;
 
 const CONNECTION_TIMEOUT_MS = 12000;
 
@@ -118,8 +121,11 @@ export function RadioPlayerProvider({ children }: { children: React.ReactNode })
       }
     })();
 
+    recordAppOpen();
+
     const appStateSub = AppState.addEventListener('change', (nextState) => {
       if (nextState === 'active') {
+        recordAppOpen();
         syncRemoteCatalog({ force: false })
           .then(({ catalog }) => {
             if (mounted && catalog) {
@@ -306,6 +312,10 @@ export function RadioPlayerProvider({ children }: { children: React.ReactNode })
       const exists = prev.includes(stationId);
       const next = exists ? prev.filter((id) => id !== stationId) : [stationId, ...prev];
       saveFavoriteIds(next);
+      if (!exists) {
+        // Give the heart animation a moment before any rating dialog.
+        setTimeout(() => recordGoodMoment('favorite_added'), 800);
+      }
       return next;
     });
   }, []);
@@ -342,6 +352,28 @@ export function RadioPlayerProvider({ children }: { children: React.ReactNode })
     if (isConnecting || engine.isBuffering) return 'loading';
     return 'paused';
   }, [currentStation, errorMessage, isConnecting, engine.isBuffering, engine.playing]);
+
+  // A listening session that lasted a while and was then paused in the app is
+  // a good moment to ask for a rating. Station switches (brief 'loading') don't
+  // end the session.
+  const listenStartRef = useRef<number | null>(null);
+  useEffect(() => {
+    if (playbackState === 'playing') {
+      if (listenStartRef.current === null) listenStartRef.current = Date.now();
+      return;
+    }
+    if (playbackState === 'paused' || playbackState === 'idle') {
+      const startedAt = listenStartRef.current;
+      listenStartRef.current = null;
+      if (
+        startedAt !== null &&
+        Date.now() - startedAt >= LONG_LISTEN_MS &&
+        AppState.currentState === 'active'
+      ) {
+        recordGoodMoment('long_listen');
+      }
+    }
+  }, [playbackState]);
 
   const value = useMemo<RadioPlayerContextValue>(
     () => ({

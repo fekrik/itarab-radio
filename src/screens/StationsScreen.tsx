@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { MoreAppsModal } from '../barqlab/MoreAppsModal';
 import { StationArtwork } from '../components/StationArtwork';
 import { StationRow } from '../components/StationRow';
 import { useRadioPlayer } from '../context/RadioPlayerContext';
@@ -38,6 +39,7 @@ export function StationsScreen() {
 
   const [query, setQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<CategoryId | 'all'>('all');
+  const [moreAppsVisible, setMoreAppsVisible] = useState(false);
 
   const filteredStations = useMemo(
     () =>
@@ -89,9 +91,19 @@ export function StationsScreen() {
           <Text style={styles.brandTitle}>iTarab Radio</Text>
           <Text style={styles.brandSubtitle}>إذاعات عربية مباشرة</Text>
         </View>
-        <View style={styles.countPill}>
-          <View style={styles.countDot} />
-          <Text style={styles.countText}>{stations.length} Live</Text>
+        <View style={styles.headerRight}>
+          <View style={styles.countPill}>
+            <View style={styles.countDot} />
+            <Text style={styles.countText}>{stations.length} Live</Text>
+          </View>
+          <TouchableOpacity
+            onPress={() => setMoreAppsVisible(true)}
+            style={styles.moreAppsBtn}
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            accessibilityLabel="More apps from Barq Lab"
+          >
+            <Ionicons name="apps-outline" size={18} color={COLORS.textPrimary} />
+          </TouchableOpacity>
         </View>
       </View>
 
@@ -236,6 +248,7 @@ export function StationsScreen() {
           </View>
         }
       />
+      <MoreAppsModal visible={moreAppsVisible} onClose={() => setMoreAppsVisible(false)} />
     </View>
   );
 }
@@ -267,6 +280,21 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: '600',
     marginTop: 2,
+  },
+  headerRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  moreAppsBtn: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: COLORS.surface,
+    borderWidth: 1,
+    borderColor: COLORS.border,
   },
   countPill: {
     flexDirection: 'row',
